@@ -62,10 +62,10 @@ function PillarCard({ title, content, label }: PillarCardProps) {
 
       {/* Contenu */}
       <div className="pl-6">
-        <h3 className="mb-4 text-2xl font-medium uppercase tracking-wide text-beige">
+        <h3 className="mb-4 text-3xl font-medium uppercase tracking-wide text-beige">
           {title}
         </h3>
-        <p className="text-base leading-relaxed text-darkblue whitespace-pre-line">{content}</p>
+        <p className="text-2xl leading-relaxed text-darkblue whitespace-pre-line">{content}</p>
       </div>
 
       {/* Label vertical */}

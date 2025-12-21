@@ -20,7 +20,8 @@ export default function ProjectCard({
   return (
     <article
       className={`
-        w-full max-w-sm sm:max-w-md md:max-w-lg 
+        w-full max-w-sm sm:max-w-md md:max-w-lg
+        h-200 sm:h-140 md:h-150 
         flex flex-col font-[Montserrat] 
         ${backgroundColor} p-4 sm:p-5 md:p-6  shadow-md
         transition-transform hover:scale-105

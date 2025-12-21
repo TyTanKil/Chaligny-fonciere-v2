@@ -1,10 +1,24 @@
+"use client";
+
+import { motion } from "framer-motion";
 import PillarsSection from "@/component/general/PillarsSection";
 
 export default function Investir() {
   return (
     <section className="h-screen snap-start bg-lightgreen flex flex-col">
-      <div className="flex items-start gap-10 pt-15 pl-15 pr-15">
-        <svg
+      {/* Titre avec SVG */}
+      <motion.div
+        initial={{ opacity: 0, y: -50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true, amount: 0.3 }}
+        className="flex items-start gap-10 pt-15 pl-15 pr-15"
+      >
+        <motion.svg
+          initial={{ opacity: 0, rotate: -10 }}
+          whileInView={{ opacity: 1, rotate: 0 }}
+          transition={{ duration: 0.7, delay: 0.2 }}
+          viewport={{ once: true }}
           width="90"
           height="103"
           viewBox="0 0 406 465"
@@ -23,18 +37,38 @@ export default function Investir() {
             d="M0 313.508V375.601L198.87 464.196L404.775 382.419L401.24 358.959L272.615 321.829L158.83 349.869L0 313.508Z"
             fill="#363D40"
           />
-        </svg>
+        </motion.svg>
 
-        <h1 className="text-7xl text-darkblue">
+        <motion.h1
+          initial={{ opacity: 0, x: -30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          viewport={{ once: true }}
+          className="text-7xl text-darkblue"
+        >
           Investir <span className="text-beige italic">avec nous</span>
           <br />
-          <span className="text-4xl text-beige font-bold font-[Montserrat]">
+          <motion.span
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+            viewport={{ once: true }}
+            className="text-4xl text-beige font-bold font-[Montserrat]"
+          >
             Chaque bien a un potentiel. Nous le révélons
-          </span>
-        </h1>
-      </div>
+          </motion.span>
+        </motion.h1>
+      </motion.div>
 
-      <PillarsSection />
+      {/* Section des piliers */}
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, delay: 0.3 }}
+        viewport={{ once: true, amount: 0.2 }}
+      >
+        <PillarsSection />
+      </motion.div>
     </section>
   );
 }

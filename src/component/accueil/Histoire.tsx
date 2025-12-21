@@ -1,11 +1,22 @@
+"use client";
+
 import Image from "next/image";
+import Link from "next/link";
+import { motion } from "framer-motion";
 
 export default function Histoire() {
   return (
     <section className="h-screen snap-start flex justify-center items-center">
       <div className="grid grid-cols-2 h-full w-full p-15">
         <div>
-          <div className="flex items-center gap-10">
+          {/* Titre avec SVG */}
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true, amount: 0.3 }}
+            className="flex items-center gap-10"
+          >
             <svg
               width="90"
               height="103"
@@ -30,29 +41,80 @@ export default function Histoire() {
             <h1 className="text-7xl text-darkblue">
               Notre <span className="text-lightgreen italic">Histoire</span>
             </h1>
-          </div>
-          <div className="flex flex-col text-4xl  gap-8 mt-10 p-10">
-            <span className="text-lightgreen font-bold">
+          </motion.div>
+
+          {/* Textes animés */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true, amount: 0.3 }}
+            className="flex flex-col text-4xl gap-8 mt-10 p-10"
+          >
+            <motion.span
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              viewport={{ once: true }}
+              className="text-lightgreen font-bold"
+            >
               Notre histoire commence sur le terrain
-            </span>
-            <span className="text-darkblue">
+            </motion.span>
+
+            <motion.span
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              viewport={{ once: true }}
+              className="text-darkblue"
+            >
               De la transaction immobilière à la structuration financière, notre
-              histoire est celle d’une rencontre entre terrain et stratégie.
-            </span>
-            <span className="text-darkblue">
+              histoire est celle d'une rencontre entre terrain et stratégie.
+            </motion.span>
+
+            <motion.span
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+              viewport={{ once: true }}
+              className="text-darkblue"
+            >
               Trois fondateurs, une vision partagée :{" "}
-            </span>
-            <span className="text-lightgreen font-bold">
+            </motion.span>
+
+            <motion.span
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.6 }}
+              viewport={{ once: true }}
+              className="text-lightgreen font-bold"
+            >
               créer un acteur immobilier agile, réactif et transparent.
-            </span>
-            <div>
-              <a className="inline-block bg-beige text-darkblue underline mt-20 p-2" href="/histoire">
-                Notre histoire
-              </a>
-            </div>
-          </div>
+            </motion.span>
+
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, delay: 0.7 }}
+              viewport={{ once: true }}
+            >
+              <Link href="/histoire">
+                <button className="inline-block bg-beige text-darkblue underline mt-20 p-2 hover:bg-darkblue hover:text-beige transition">
+                  Notre histoire
+                </button>
+              </Link>
+            </motion.div>
+          </motion.div>
         </div>
-        <div className="relative">
+
+        {/* Image animée */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+          viewport={{ once: true, amount: 0.3 }}
+          className="relative"
+        >
           <Image
             src="/Bordeaux.png"
             alt="Page d'accueil"
@@ -60,7 +122,7 @@ export default function Histoire() {
             style={{ objectFit: "cover" }}
             priority
           />
-        </div>
+        </motion.div>
       </div>
     </section>
   );

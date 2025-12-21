@@ -36,15 +36,28 @@ export function Toggle({
       {/* SWITCH */}
       <div
         onClick={() => onToggle(!active)}
-        className={`flex h-5 w-15 cursor-pointer rounded-full border border-black
-          ${active ? "bg-beige justify-end" : "bg-lightgreen justify-start"}
-          p-[1px]`}
+        className={`
+          relative
+          h-6
+          w-14
+          cursor-pointer
+          rounded-full
+          p-1
+          transition-colors
+          ${active ? "bg-beige" : "bg-lightgreen"}
+        `}
         aria-label="Changer de page"
       >
         <motion.div
-          layout
-          transition={{ type: "spring", stiffness: 700, damping: 30 }}
-          className="h-4 w-4 rounded-full bg-black"
+          className="h-4 w-4 rounded-full bg-darkblue"
+          animate={{
+            x: active ? 32 : 0, // déplacement propre
+          }}
+          transition={{
+            type: "spring",
+            stiffness: 500,
+            damping: 30,
+          }}
         />
       </div>
 
