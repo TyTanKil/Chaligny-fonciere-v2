@@ -2,7 +2,7 @@ export const teamMembers = [
   {
     id: 1,
     name: "Laurent Dacosta",
-    role: "Directeur de la Stratégie Immbilière",
+    role: "Directeur de la Stratégie Immobilière",
     description: `Laurent définit la stratégie d’acquisition et les orientations immobilières de la foncière. Il coordonne les expertises internes et veille à la cohérence des opérations, de la prospection des opportunités jusqu’à leur intégration dans le portefeuille. Il contribue au développement global et à la vision stratégique de la société.`,
     image: "/team/2.png",
   },

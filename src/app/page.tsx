@@ -8,7 +8,7 @@ import ImmoBricks from "@/component/accueil/ImmoBricks";
 
 export default function Home() {
   return (
-    <div className="h-screen overflow-y-scroll snap-y snap-mandatory">
+    <div className="h-screen overflow-y-scroll snap-y snap-mandatory scroll-smooth">
       <Logo />
       <Histoire />
       <Vision />

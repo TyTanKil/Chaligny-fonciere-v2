@@ -21,6 +21,7 @@ type Props = {
   overflowImage?: boolean;
   alignBottom?: boolean;
   children?: React.ReactNode;
+  initialId?: number;
 };
 
 export function TeamCarousel({
@@ -29,8 +30,13 @@ export function TeamCarousel({
   overflowImage = false,
   alignBottom = false,
   children,
+  initialId,
 }: Props) {
-  const [index, setIndex] = useState(0);
+  const initialIndex = initialId
+    ? data.findIndex((member) => member.id === initialId)
+    : 0;
+
+  const [index, setIndex] = useState(initialIndex >= 0 ? initialIndex : 0);
 
   const next = () => {
     setIndex((prev) => (prev + 1) % data.length);
@@ -40,7 +46,6 @@ export function TeamCarousel({
     setIndex((prev) => (prev - 1 + data.length) % data.length);
   };
 
-  // 🔁 Autoplay
   useEffect(() => {
     const interval = setInterval(next, autoplayDelay);
     return () => clearInterval(interval);

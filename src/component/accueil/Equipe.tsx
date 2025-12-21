@@ -16,7 +16,7 @@ export default function Equipe() {
           transition={{ duration: 0.7 }}
           viewport={{ once: true, amount: 0.2 }}
         >
-          <TeamCarousel data={teamMembers} overflowImage />
+          <TeamCarousel data={teamMembers} overflowImage initialId={1} />
         </motion.div>
 
         {/* Deuxième carousel */}
@@ -26,7 +26,7 @@ export default function Equipe() {
           transition={{ duration: 0.7, delay: 0.2 }}
           viewport={{ once: true, amount: 0.2 }}
         >
-          <TeamCarousel data={teamMembers} />
+          <TeamCarousel data={teamMembers} initialId={2}/>
         </motion.div>
 
         {/* Troisième carousel avec bouton */}
@@ -36,7 +36,7 @@ export default function Equipe() {
           transition={{ duration: 0.7, delay: 0.4 }}
           viewport={{ once: true, amount: 0.2 }}
         >
-          <TeamCarousel data={teamMembers}>
+          <TeamCarousel data={teamMembers} initialId={3}>
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
