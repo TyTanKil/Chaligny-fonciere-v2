@@ -1,18 +1,22 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 import PillarsSection from "@/component/general/PillarsSection";
 
 export default function Investir() {
   return (
-    <section className="h-screen snap-start bg-lightgreen flex flex-col">
+    <section
+      data-section
+      className="h-screen snap-start bg-lightgreen flex flex-col"
+    >
       {/* Titre avec SVG */}
       <motion.div
         initial={{ opacity: 0, y: -50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true, amount: 0.3 }}
-        className="flex items-start gap-10 pt-15 pl-15 pr-15"
+        className="flex items-start gap-10 pt-15 pl-15 pr-15 mt-5"
       >
         <motion.svg
           initial={{ opacity: 0, rotate: -10 }}
@@ -44,7 +48,7 @@ export default function Investir() {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
-          className="text-7xl text-darkblue"
+          className="2xl:text-7xl xl:text-5xl text-darkblue"
         >
           Investir <span className="text-beige italic">avec nous</span>
           <br />
@@ -53,9 +57,9 @@ export default function Investir() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
             viewport={{ once: true }}
-            className="text-4xl text-beige font-bold font-[Montserrat]"
+            className="2xl:text-3xl xl:text-2xl text-beige font-bold font-[Montserrat]"
           >
-            Chaque bien a un potentiel. Nous le révélons
+            Investir aux côtés d’une foncière immobilière indépendante à Paris
           </motion.span>
         </motion.h1>
       </motion.div>
@@ -66,8 +70,23 @@ export default function Investir() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, delay: 0.3 }}
         viewport={{ once: true, amount: 0.2 }}
+        className="relative"
       >
         <PillarsSection />
+        {/* Bouton */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5, delay: 0.6 }}
+          viewport={{ once: true }}
+          className="absolute bottom-6 right-8 font-[Faustina]"
+        >
+          <Link href="/investir">
+            <button className="bg-beige text-2xl text-darkblue underline p-2 hover:bg-darkblue hover:text-beige transition">
+              En Savoir plus
+            </button>
+          </Link>
+        </motion.div>
       </motion.div>
     </section>
   );

@@ -1,6 +1,6 @@
 export default function Logo() {
   return (
-    <section className="h-screen snap-start bg-lightgreen flex justify-center items-center">
+    <section data-section className="h-screen snap-start bg-lightgreen flex justify-center items-center">
       <svg
         width="572"
         height="655"

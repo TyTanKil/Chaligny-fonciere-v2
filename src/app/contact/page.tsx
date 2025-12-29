@@ -55,7 +55,7 @@ export default function TogglePage() {
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-7xl text-darkblue transition-colors duration-500"
+            className="2xl:text-7xl xl:text-5xl text-darkblue transition-colors duration-500"
           >
             <span
               className={`
@@ -101,7 +101,7 @@ export default function TogglePage() {
             className="w-full"
           >
             {/* CONTENU HISTOIRE */}
-            <section className="h-[200vh] relative overflow-visible">
+            <section className="h-[180vh] relative overflow-visible">
               {/* Image en arrière-plan */}
               <motion.img
                 initial={{ opacity: 0, x: 100, scale: 0.9 }}
@@ -111,12 +111,16 @@ export default function TogglePage() {
                 alt="Photo histoire foncière Chaligny"
                 className="
       absolute
-      right-60
-      w-auto
+      2xl:right-60
+      xl:right-0
+      2xl:w-auto
+      xl:w-200
       object-cover
       z-20
-      translate-x-1/4
-      translate-y-3/5
+      2xl:translate-x-1/4
+      xl:translate-x-1/14
+      2xl:translate-y-3/5
+      xl:translate-y-5/6
     "
               />
 
@@ -138,7 +142,8 @@ export default function TogglePage() {
       p-9
       font-[Montserrat]
       text-darkblue
-      text-4xl
+      2xl:text-4xl
+      xl:text-3xl
     "
               >
                 <motion.span
@@ -184,20 +189,26 @@ export default function TogglePage() {
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5, delay: 0.8 }}
-                  className="flex jsutify-center items-center gap-20 mt-20"
+                  className="flex items-center gap-20 mt-20"
                 >
-                  <img src="/phone.png" alt="Phone" className="w-20 h-20" />
-                  <p className="text-darkblue text-4xl">07 77 77 77 77</p>
+                  <img src="/phone.png" alt="Phone" className="2xl:w-20 2xl:h-20 xl:w-10 xl:h-10" />
+                  <p
+                    className="text-darkblue 2xl:text-4xl xl:text-3xl"
+                  >
+                    07 77 77 77 77
+                  </p>
                 </motion.div>
 
                 <motion.div
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5, delay: 0.9 }}
-                  className="flex jsutify-center items-center gap-20 mt-20"
+                  className="flex items-center gap-20 mt-20"
                 >
-                  <img src="/email.png" alt="Email" className="w-20 h-20" />
-                  <p className="text-darkblue text-4xl">
+                  <img src="/email.png" alt="Email" className="2xl:w-20 2xl:h-20 xl:w-10 xl:h-10" />
+                  <p
+                    className="text-darkblue 2xl:text-4xl xl:text-3xl"
+                  >
                     contact@foncièrechaligny.com
                   </p>
                 </motion.div>
@@ -206,10 +217,14 @@ export default function TogglePage() {
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5, delay: 1 }}
-                  className="flex jsutify-center items-center gap-20 mt-20"
+                  className="flex items-center gap-20 mt-20"
                 >
-                  <img src="/location.png" alt="Location" className="w-20 h-20" />
-                  <p className="text-darkblue text-4xl">
+                  <img
+                    src="/location.png"
+                    alt="Location"
+                    className="2xl:w-20 2xl:h-20 xl:w-10 xl:h-10"
+                  />
+                  <p className="text-darkblue 2xl:text-4xl xl:text-3xl">
                     10 rue des champs Elysés
                   </p>
                 </motion.div>
@@ -228,7 +243,7 @@ export default function TogglePage() {
             className="w-full"
           >
             {/* CONTENU ÉQUIPE */}
-            <section className="h-[200vh] relative overflow-visible">
+            <section className="h-[180vh] relative overflow-visible">
               {/* Image en arrière-plan */}
               <motion.img
                 initial={{ opacity: 0, x: 100, scale: 0.9 }}
@@ -238,12 +253,16 @@ export default function TogglePage() {
                 alt="Photo histoire foncière Chaligny"
                 className="
       absolute
-      right-60
-      w-auto
+      2xl:right-60
+      xl:right-0
+      2xl:w-auto
+      xl:w-200
       object-cover
       z-20
-      translate-x-1/4
-      translate-y-3/5
+      2xl:translate-x-1/4
+      xl:translate-x-1/14
+      2xl:translate-y-3/5
+      xl:translate-y-5/6
     "
               />
 
@@ -265,7 +284,8 @@ export default function TogglePage() {
       p-9
       font-[Montserrat]
       text-darkblue
-      text-4xl
+      2xl:text-4xl
+      xl:text-3xl
     "
               >
                 <motion.span
@@ -312,20 +332,20 @@ export default function TogglePage() {
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5, delay: 0.8 }}
-                  className="flex jsutify-center items-center gap-20 mt-20"
+                  className="flex items-center gap-20 mt-20"
                 >
-                  <img src="/phone.png" alt="Phone" className="w-20 h-20" />
-                  <p className="text-darkblue text-4xl">07 77 77 77 77</p>
+                  <img src="/phone.png" alt="Phone" className="2xl:w-20 2xl:h-20 xl:w-10 xl:h-10" />
+                  <p className="text-darkblue 2xl:text-4xl xl:text-3xl">07 77 77 77 77</p>
                 </motion.div>
 
                 <motion.div
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5, delay: 0.9 }}
-                  className="flex jsutify-center items-center gap-20 mt-20"
+                  className="flex items-center gap-20 mt-20"
                 >
-                  <img src="/email.png" alt="Email" className="w-20 h-20" />
-                  <p className="text-darkblue text-4xl">
+                  <img src="/email.png" alt="Email" className="2xl:w-20 2xl:h-20 xl:w-10 xl:h-10" />
+                  <p className="text-darkblue 2xl:text-4xl xl:text-3xl">
                     contact@foncièrechaligny.com
                   </p>
                 </motion.div>
@@ -334,10 +354,14 @@ export default function TogglePage() {
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5, delay: 1 }}
-                  className="flex jsutify-center items-center gap-20 mt-20"
+                  className="flex items-center gap-20 mt-20"
                 >
-                  <img src="/location.png" alt="Location" className="w-20 h-20" />
-                  <p className="text-darkblue text-4xl">
+                  <img
+                    src="/location.png"
+                    alt="Location"
+                    className="2xl:w-20 2xl:h-20 xl:w-10 xl:h-10"
+                  />
+                  <p className="text-darkblue 2xl:text-4xl xl:text-3xl">
                     10 rue des champs Elysés
                   </p>
                 </motion.div>

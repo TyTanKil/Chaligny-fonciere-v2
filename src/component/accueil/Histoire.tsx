@@ -6,7 +6,10 @@ import { motion } from "framer-motion";
 
 export default function Histoire() {
   return (
-    <section className="h-screen snap-start flex justify-center items-center">
+    <section
+      data-section
+      className="h-screen snap-start flex justify-center items-center"
+    >
       <div className="grid grid-cols-2 h-full w-full p-15">
         <div>
           {/* Titre avec SVG */}
@@ -15,7 +18,7 @@ export default function Histoire() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true, amount: 0.3 }}
-            className="flex items-center gap-10"
+            className="flex items-center gap-10 mt-5"
           >
             <svg
               width="90"
@@ -38,7 +41,7 @@ export default function Histoire() {
               />
             </svg>
 
-            <h1 className="text-7xl text-darkblue">
+            <h1 className="2xl:text-7xl xl:text-5xl text-darkblue">
               Notre <span className="text-lightgreen italic">Histoire</span>
             </h1>
           </motion.div>
@@ -49,7 +52,7 @@ export default function Histoire() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true, amount: 0.3 }}
-            className="flex flex-col text-4xl gap-8 mt-10 p-10"
+            className="flex flex-col 2xl:text-2xl xl:text-lg gap-8 mt-10 p-10 font-[Montserrat]"
           >
             <motion.span
               initial={{ opacity: 0, y: 20 }}
@@ -58,7 +61,8 @@ export default function Histoire() {
               viewport={{ once: true }}
               className="text-lightgreen font-bold"
             >
-              Notre histoire commence sur le terrain
+              Une foncière immobilière née du terrain et de l’expertise
+              financière
             </motion.span>
 
             <motion.span
@@ -68,18 +72,12 @@ export default function Histoire() {
               viewport={{ once: true }}
               className="text-darkblue"
             >
-              De la transaction immobilière à la structuration financière, notre
-              histoire est celle d'une rencontre entre terrain et stratégie.
-            </motion.span>
-
-            <motion.span
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.5 }}
-              viewport={{ once: true }}
-              className="text-darkblue"
-            >
-              Trois fondateurs, une vision partagée :{" "}
+              De la transaction immobilière à la structuration financière,
+              Foncière Chaligny est née de la rencontre entre des expertises
+              complémentaires, réunies autour d’une même ambition :<br />
+              <span className="text-lightgreen font-bold">
+                créer un acteur immobilier indépendant, agile et transparent.
+              </span>
             </motion.span>
 
             <motion.span
@@ -87,9 +85,12 @@ export default function Histoire() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.6 }}
               viewport={{ once: true }}
-              className="text-lightgreen font-bold"
+              className="text-darkblue"
             >
-              créer un acteur immobilier agile, réactif et transparent.
+              Portée par trois fondateurs aux profils parfaitement alignés, la
+              foncière développe et gère des actifs immobiliers à Paris et en
+              Île-de-France avec une approche responsable, rigoureuse et ancrée
+              dans la réalité du marché.
             </motion.span>
 
             <motion.div
@@ -113,13 +114,13 @@ export default function Histoire() {
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.3 }}
           viewport={{ once: true, amount: 0.3 }}
-          className="relative"
+          className="relative h-[250px] sm:h-[350px] md:h-[450px] lg:h-[550px] xl:h-[650px] 2xl:h-[800px] mt-10"
         >
           <Image
             src="/Bordeaux.png"
             alt="Page d'accueil"
             fill
-            style={{ objectFit: "cover" }}
+            style={{ objectFit: "cover", objectPosition: "center" }}
             priority
           />
         </motion.div>

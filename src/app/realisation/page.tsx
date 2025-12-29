@@ -85,9 +85,9 @@ export default function Realisation() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1 }}
           >
-            Investir{" "}
+            Nous{" "}
             <span className="not-italic transition-colors duration-500 text-darkblue">
-              avec nous
+              réalisons
             </span>
           </motion.h1>
         </motion.div>

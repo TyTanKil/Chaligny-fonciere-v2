@@ -7,40 +7,39 @@ const pillars = [
     id: 1,
     title: "IDENTIFIER LES ACTIFS À POTENTIEL",
     content:
-      "Nous analysons en profondeur le marché, les emplacements et le potentiel de chaque immeuble. \nGrâce à notre présence terrain et à notre expertise parisienne, nous identifions des actifs rares, solides et créateurs de valeur.",
+      "Analyse du marché immobilier parisien et sélection d’actifs à fort potentiel de valorisation, fondée sur une connaissance fine du terrain et des emplacements stratégiques.",
     label: "SÉLECTION",
   },
   {
     id: 2,
     title: "ACQUÉRIR AU BON MOMENT",
     content:
-      "Notre structure indépendante nous permet d’être réactifs et de saisir les meilleures opportunités au bon moment. \nNous négocions au juste prix, avec une connaissance fine du marché et des cycles immobiliers.",
+      "Acquisition d’actifs au juste prix grâce à une structure indépendante, réactive et une parfaite maîtrise des cycles immobiliers.",
     label: "PRÉCISION",
   },
   {
     id: 3,
     title: "OPTIMISER ET TRANSFORMER",
     content:
-      "Nous augmentons la performance des actifs grâce à des actions ciblées : travaux, réhabilitation, modernisation ou optimisation locative.",
+      "Amélioration de la performance des actifs par des actions ciblées : travaux, réhabilitation, modernisation et optimisation locative.",
     label: "OPTIMISER",
   },
   {
     id: 4,
     title: "VALORISER / GÉRER",
     content:
-      "Nous assurons le suivi administratif, juridique, technique et locatif de chaque bien pour garantir une gestion stable et performante. \nNotre vision long terme permet d’anticiper, d’accompagner et de sécuriser la valeur des actifs dans la durée.",
+      "Gestion complète et rigoureuse des actifs afin de sécuriser et pérenniser la valeur des investissements dans le temps.",
     label: "PÉRENNITÉ",
   },
 ];
 
 export default function PillarsSection() {
   return (
-    
-      <div className="flex p-15 w-full h-175 items-stretch">
-        {pillars.map((pillar) => (
-          <PillarCard key={pillar.id} {...pillar} />
-        ))}
-      </div>
+    <div className="flex p-8 w-full h-175 items-stretch">
+      {pillars.map((pillar) => (
+        <PillarCard key={pillar.id} {...pillar} />
+      ))}
+    </div>
   );
 }
 
@@ -62,10 +61,12 @@ function PillarCard({ title, content, label }: PillarCardProps) {
 
       {/* Contenu */}
       <div className="pl-6">
-        <h3 className="mb-4 text-3xl font-medium uppercase tracking-wide text-beige">
+        <h3 className="mb-4 2xl:text-3xl xl:text-2xl font-medium uppercase tracking-wide text-beige">
           {title}
         </h3>
-        <p className="text-2xl leading-relaxed text-darkblue whitespace-pre-line">{content}</p>
+        <p className="2xl:text-2xl xl:text-xl leading-relaxed text-darkblue whitespace-pre-line">
+          {content}
+        </p>
       </div>
 
       {/* Label vertical */}

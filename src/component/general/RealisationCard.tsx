@@ -21,14 +21,14 @@ export default function ProjectCard({
     <article
       className={`
         w-full max-w-sm sm:max-w-md md:max-w-lg
-        h-200 sm:h-140 md:h-150 
+        h-200 sm:h-140 md:h-140 
         flex flex-col font-[Montserrat] 
         ${backgroundColor} p-4 sm:p-5 md:p-6  shadow-md
         transition-transform hover:scale-105
       `}
     >
       {/* Image */}
-      <div className="w-full h-48 sm:h-56 md:h-64 overflow-hidden ">
+      <div className="w-full 2xl: h-48 sm:h-56 md:h-64 overflow-hidden ">
         <img
           src={imageSrc}
           alt={imageAlt}

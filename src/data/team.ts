@@ -10,10 +10,11 @@ export const teamMembers = [
     id: 2,
     name: "Eleonore Crevon",
     role: "Directrice des Opérations Immobilières",
-    description: `Éléonore supervise l’ensemble des opérations immobilières,
-du sourcing des actifs à leur gestion opérationnelle.
-Elle pilote la sélection des biens, leur analyse,
-la stratégie de valorisation et la coordination des projets terrain.`,
+    description: `Éléonore supervise l’ensemble des opérations immobilières, 
+du sourcing des actifs à leur gestion opérationnelle. 
+Elle pilote la sélection des biens, leur analyse, 
+la stratégie de valorisation et la coordination des projets terrain. 
+Elle garantit la performance et la cohérence du portefeuille immobilier.`,
     image: "/team/3.png",
   },
   {

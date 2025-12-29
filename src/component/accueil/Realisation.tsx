@@ -6,7 +6,7 @@ import ProjectCard from "@/component/general/RealisationCard";
 
 export default function Realisation() {
   return (
-    <section className="h-screen snap-start flex flex-col">
+    <section data-section className="h-screen snap-start flex flex-col">
       {/* Titre avec SVG */}
       <motion.div
         initial={{ opacity: 0, x: -50 }}
@@ -15,7 +15,7 @@ export default function Realisation() {
         viewport={{ once: true, amount: 0.3 }}
         className="flex gap-10 pt-15 pl-15 pr-15"
       >
-        <div className="flex items-center gap-10">
+        <div className="flex items-center gap-10 mt-5">
           <motion.svg
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -46,29 +46,24 @@ export default function Realisation() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
             viewport={{ once: true }}
-            className="text-7xl text-lightgreen italic"
+            className="2xl:text-7xl xl:text-5xl text-lightgreen italic"
           >
             Nous <span className="text-darkblue not-italic">réalisons</span>
+            <br />
+            <motion.span
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              viewport={{ once: true }}
+              className="2xl:text-3xl xl:text-2xl text-lightgreen font-bold font-[Montserrat] not-italic"
+            >
+              Nos réalisations immobilières à Paris et en Île-de-France
+            </motion.span>
           </motion.h1>
         </div>
       </motion.div>
 
-      <div className="flex flex-col gap-10">
-        {/* Premier bouton */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.4 }}
-          viewport={{ once: true }}
-          className="flex justify-center"
-        >
-          <Link href="/equipe">
-            <button className="inline-block bg-beige text-4xl text-darkblue p-2 hover:bg-darkblue hover:text-beige transition">
-              <span className="underline">S</span>avoir faire
-            </button>
-          </Link>
-        </motion.div>
-
+      <div className="flex flex-col gap-10 mt-10">
         {/* Cards des projets */}
         <div className="flex justify-center gap-15 pl-10 pr-10">
           <motion.div
@@ -98,7 +93,7 @@ export default function Realisation() {
             viewport={{ once: true, amount: 0.2 }}
           >
             <ProjectCard
-              imageSrc="/10.png"
+              imageSrc="/11.png"
               imageAlt="Immeuble résidentiel à Paris"
               title="RÉNOVATION D'UN IMMEUBLE RÉSIDENTIEL À PARIS 1ᵉ"
               description={[
@@ -118,7 +113,7 @@ export default function Realisation() {
             viewport={{ once: true, amount: 0.2 }}
           >
             <ProjectCard
-              imageSrc="/10.png"
+              imageSrc="/12.png"
               imageAlt="Immeuble résidentiel à Paris"
               title="RÉNOVATION D'UN IMMEUBLE RÉSIDENTIEL À PARIS 1ᵉ"
               description={[

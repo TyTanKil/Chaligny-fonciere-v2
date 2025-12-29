@@ -148,19 +148,19 @@ export default function TogglePage() {
       p-9
       font-[Montserrat]
       text-darkblue
-      text-4xl
+      2xl:text-3xl
+      xl:text-2xl
     "
               >
                 <motion.span
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.5 }}
-                  className="font-[Faustina] text-lightgreen italic"
+                  className="2xl:text-5xl
+      xl:text-4xl font-[Faustina] text-lightgreen "
                 >
                   Notre histoire{" "}
-                  <span className="text-darkblue not-italic">
-                    commence sur le terrain
-                  </span>
+                  <span className="text-darkblue">commence sur le terrain</span>
                 </motion.span>
 
                 <motion.span
@@ -168,38 +168,44 @@ export default function TogglePage() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.6 }}
                 >
-                  Foncière Chaligny est une foncière indépendante qui s'appuie
-                  sur{" "}
-                  <span className="text-lightgreen font-bold">
-                    une conviction simple :
-                  </span>{" "}
-                  la performance durable naît de la complémentarité, de la
-                  confiance et d'une vision long terme.
+                  Foncière Chaligny est une foncière immobilière indépendante,
+                  fondée sur une conviction simple :
+                </motion.span>
+                <motion.span
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.6 }}
+                >
+                  La performance durable repose sur la complémentarité des
+                  expertises, la confiance et une vision long terme de
+                  l’investissement immobilier.
                 </motion.span>
 
                 <motion.span
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.7 }}
-                  className="w-2/3"
+                  className=""
                 >
                   Portée par trois fondateurs aux profils différents mais
-                  parfaitement alignés, Foncière Chaligny développe et gère des
-                  actifs immobiliers avec une approche responsable, agile et
-                  ancrée dans la réalité du terrain.
+                  parfaitement alignés, Foncière Chaligny acquiert, développe et
+                  gère des actifs immobiliers avec une approche responsable,
+                  agile et ancrée dans la réalité du terrain, notamment sur le
+                  marché parisien et francilien.
                 </motion.span>
 
                 <motion.span
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.8 }}
-                  className="w-2/3"
+                  className=""
                 >
                   <span className="text-lightgreen font-bold">
                     Notre promesse :{" "}
                   </span>
-                  offrir une gestion transparente, exigeante et tournée vers la
-                  création de valeur durable pour nos investisseurs.
+                  offrir à nos investisseurs une gestion transparente et
+                  exigeante, tournée vers la création de valeur durable dans le
+                  temps.
                 </motion.span>
 
                 <motion.div
@@ -208,7 +214,8 @@ export default function TogglePage() {
                   transition={{ duration: 0.6, delay: 0.9 }}
                   className="
     absolute
-    -bottom-16
+    2xl:-bottom-30
+    xl:-bottom-24
     -left-21 
     w-[75vw]
     bg-darkblue
@@ -297,7 +304,8 @@ export default function TogglePage() {
       w-3/5
       p-9
       font-[Montserrat]
-      text-4xl
+      2xl:text-3xl
+      xl:text-2xl
       text-darkblue
     "
               >
@@ -322,8 +330,8 @@ export default function TogglePage() {
                 >
                   <span className="font-bold">Éléonore Crevon</span>
                   <br /> Co-fondatrice
-                  <br /> Elle porte l'approche humaine et la relation de
-                  confiance qui guide chaque projet.
+                  <br /> Elle porte l’approche humaine et la relation de
+                  confiance qui guident chaque projet immobilier.
                 </motion.span>
 
                 <motion.span
@@ -334,8 +342,8 @@ export default function TogglePage() {
                 >
                   <span className="font-bold">Laurent Da Costa</span>
                   <br /> Co-fondateur
-                  <br /> Il garantit l'exigence opérationnelle et la fiabilité
-                  au cœur de la foncière.
+                  <br /> Il garantit l’exigence opérationnelle et la fiabilité
+                  des opérations au cœur de la foncière.
                 </motion.span>
 
                 <motion.span
@@ -346,8 +354,8 @@ export default function TogglePage() {
                 >
                   <span className="font-bold">Ivan Varady</span>
                   <br /> Co-fondateur
-                  <br /> Il apporte la vision stratégique et la cohérence à long
-                  terme.
+                  <br /> Il apporte la vision stratégique et financière,
+                  assurant la cohérence des investissements dans le long terme.
                 </motion.span>
 
                 <motion.span
@@ -359,7 +367,8 @@ export default function TogglePage() {
                   Ensemble, ils incarnent les valeurs de Foncière Chaligny :
                   <br />
                   <span className="text-lightgreen font-bold italic">
-                    complémentarité, confiance et vision durable.
+                    complémentarité, confiance et vision durable de
+                    l’investissement immobilier.
                   </span>
                 </motion.span>
 

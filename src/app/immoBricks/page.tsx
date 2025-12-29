@@ -51,7 +51,7 @@ export default function ImmoBricks() {
       </div>
 
       {/* Section principale avec texte et image */}
-      <div className="relative flex w-full font-[Montserrat] p-16 h-150">
+      <div className="relative flex w-full font-[Montserrat] p-16 2xl:h-150">
         {/* TEXTE — 2/3 */}
         <div className="flex justify-center">
           <div className="flex flex-col space-y-6">
@@ -67,7 +67,7 @@ export default function ImmoBricks() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
                 viewport={{ once: true }}
-                className="uppercase text-lightgreen text-5xl"
+                className="uppercase text-lightgreen 2xl:text-5xl xl:text-3xl"
               >
                 l'immobilier accessible autrement
               </motion.h1>
@@ -77,7 +77,7 @@ export default function ImmoBricks() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.3 }}
                 viewport={{ once: true }}
-                className="text-2xl text-darkblue"
+                className="2xl:text-2xl xl:text-xl text-darkblue"
               >
                 Immo Bricks est notre futur modèle d'investissement fractionné,
                 fondé sur la digitalisation d'actifs immobiliers via la
@@ -89,7 +89,7 @@ export default function ImmoBricks() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.4 }}
                 viewport={{ once: true }}
-                className="text-2xl text-darkblue"
+                className="2xl:text-2xl xl:text-xl text-darkblue"
               >
                 <span className="font-bold">L'objectif :</span> permettre à
                 chacun d'investir dans des actifs sélectionnés par Foncière
@@ -101,7 +101,7 @@ export default function ImmoBricks() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: 0.5 }}
                 viewport={{ once: true }}
-                className="text-2xl text-center text-lightgreen font-semibold"
+                className="2xl:text-2xl xl:text-xl text-center text-lightgreen font-semibold"
               >
                 à partir de 2 000 euros sans les contraintes de gestion.
               </motion.p>
@@ -117,7 +117,7 @@ export default function ImmoBricks() {
           viewport={{ once: true, amount: 0.2 }}
           src="/13.png"
           alt="Illustration"
-          className="absolute right-30 w-170 h-190 object-cover"
+          className="absolute 2xl:right-30 xl:right-0 2xl:w-170 xl:w-140 2xl:h-190 xl:h-140 object-cover"
         />
       </div>
 
@@ -169,11 +169,13 @@ export default function ImmoBricks() {
               whileInView={{ scaleX: 1 }}
               transition={{ duration: 0.8, delay: 0.5 }}
               viewport={{ once: true }}
-              className="absolute top-1/2 h-px bg-darkblue z-0 origin-left"
-              style={{
-                left: "calc(50% - 200px)",
-                width: "calc(100vw - (50% - 480px))",
-              }}
+              className="
+    absolute top-1/2 h-px bg-darkblue z-0 origin-left
+    left-[calc(50%-200px)]
+    xl:left-[calc(20%-200px)]
+    2xl:left-[calc(50%-200px)]
+    w-[calc(100vw-(50%-480px))]
+  "
             />
 
             {/* Étapes */}

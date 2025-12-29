@@ -107,13 +107,15 @@ export default function Investir() {
         viewport={{ once: true }}
         transition={{ duration: 1 }}
       >
-        <span className="w-1/3 p-5 bg-white font-[Montserrat] text-center text-darkblue z-10">
-          notre ambition est d’offrir à nos investisseurs un cadre clair,
-          structuré et sécurisé pour développer leur patrimoine. <br />
+        <span className="w-1/3 p-5 bg-white font-[Montserrat] text-center text-darkblue z-50">
+          Notre ambition est d’offrir à nos investisseurs un cadre
+          d’investissement clair, structuré et sécurisé pour développer leur
+          patrimoine immobilier. <br />
           <br />
-          Nous sélectionnons des actifs soigneusement analysés, nous les gérons
-          avec rigueur et nous veillons à créer de la valeur dans le temps en
-          toute transparence.
+          Nous sélectionnons des actifs immobiliers rigoureusement analysés, les
+          gérons avec exigence et mettons en œuvre des stratégies visant à créer
+          de la valeur durable, dans une logique de transparence et de
+          performance.
         </span>
       </motion.div>
 

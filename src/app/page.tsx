@@ -5,10 +5,15 @@ import Equipe from "@/component/accueil/Equipe";
 import Investir from "@/component/accueil/Investir";
 import Realisation from "@/component/accueil/Realisation";
 import ImmoBricks from "@/component/accueil/ImmoBricks";
+import Contact from "@/component/accueil/Contact";
+import ScrollIndicator from "@/component/general/ScrollIndicator";
+import Navbar from "@/component/general/NavBar";
 
 export default function Home() {
   return (
-    <div className="h-screen overflow-y-scroll snap-y snap-mandatory scroll-smooth">
+    <div className="scroll-container no-scrollbar h-screen overflow-y-scroll snap-y snap-mandatory scroll-smooth relative">
+      <Navbar />
+      <ScrollIndicator />
       <Logo />
       <Histoire />
       <Vision />
@@ -16,6 +21,7 @@ export default function Home() {
       <Investir />
       <Realisation />
       <ImmoBricks />
+      <Contact />
     </div>
   );
 }
