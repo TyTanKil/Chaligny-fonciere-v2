@@ -65,7 +65,7 @@ export default function Vision() {
           {/* Ligne horizontale */}
           <div
             className="absolute top-1/2 left-0 h-1 bg-darkblue -translate-y-1/2 -ml-20"
-            style={{ width: "calc(100% + 200px)" }}
+            style={{ width: "calc(100% + 140px)" }}
           />
 
           {/* Étapes */}
