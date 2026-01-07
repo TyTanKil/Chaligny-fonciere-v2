@@ -119,7 +119,7 @@ export default function ImmoBricks() {
           viewport={{ once: true, amount: 0.2 }}
           src="/13.png"
           alt="Illustration"
-          className="absolute 2xl:right-30 xl:right-0 2xl:w-170 xl:w-140 2xl:h-190 xl:h-140 object-cover z-0"
+          className="absolute 2xl:right-30 xl:right-0 2xl:w-170 xl:w-100 2xl:h-170 xl:h-100 object-cover z-0"
         />
       </div>
 

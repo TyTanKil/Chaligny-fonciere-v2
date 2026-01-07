@@ -57,9 +57,15 @@ export default function ContactSection({
             className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4 font-[Faustina]"
           >
             <input placeholder="Nom" className="p-2 border border-darkblue" />
-            <input placeholder="Prénom" className="p-2 border border-darkblue" />
+            <input
+              placeholder="Prénom"
+              className="p-2 border border-darkblue"
+            />
             <input placeholder="Mail" className="p-2 border border-darkblue" />
-            <input placeholder="Téléphone" className="p-2 border border-darkblue" />
+            <input
+              placeholder="Téléphone"
+              className="p-2 border border-darkblue"
+            />
           </motion.div>
 
           <motion.textarea
@@ -77,8 +83,17 @@ export default function ContactSection({
             transition={{ duration: 0.5, delay: 0.6 }}
             className="flex items-center gap-4 mt-6"
           >
-            <img src="/phone.png" alt="Phone" className="2xl:w-12 2xl:h-12 xl:w-8 xl:h-8" />
-            <p className="text-darkblue 2xl:text-3xl xl:text-2xl">{phone}</p>
+            <img
+              src="/phone.png"
+              alt="Phone"
+              className="2xl:w-12 2xl:h-12 xl:w-8 xl:h-8"
+            />
+            <a
+              href={`tel:${phone}`}
+              className="text-darkblue 2xl:text-3xl xl:text-2xl hover:underline cursor-pointer"
+            >
+              {phone}
+            </a>
           </motion.div>
 
           <motion.div
@@ -87,8 +102,17 @@ export default function ContactSection({
             transition={{ duration: 0.5, delay: 0.7 }}
             className="flex items-center gap-4 mt-6"
           >
-            <img src="/email.png" alt="Email" className="2xl:w-12 2xl:h-12 xl:w-8 xl:h-8" />
-            <p className="text-darkblue 2xl:text-3xl xl:text-2xl">{email}</p>
+            <img
+              src="/email.png"
+              alt="Email"
+              className="2xl:w-12 2xl:h-12 xl:w-8 xl:h-8"
+            />
+            <a
+              href={`mailto:${email}`}
+              className="text-darkblue 2xl:text-3xl xl:text-2xl hover:underline cursor-pointer"
+            >
+              {email}
+            </a>
           </motion.div>
 
           <motion.div
@@ -97,8 +121,21 @@ export default function ContactSection({
             transition={{ duration: 0.5, delay: 0.8 }}
             className="flex items-center gap-4 mt-6"
           >
-            <img src="/location.png" alt="Location" className="2xl:w-12 2xl:h-12 xl:w-8 xl:h-8" />
-            <p className="text-darkblue 2xl:text-3xl xl:text-2xl">{address}</p>
+            <img
+              src="/location.png"
+              alt="Location"
+              className="2xl:w-12 2xl:h-12 xl:w-8 xl:h-8"
+            />
+            <a
+              href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+                address
+              )}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-darkblue 2xl:text-3xl xl:text-2xl hover:underline cursor-pointer"
+            >
+              {address}
+            </a>
           </motion.div>
         </motion.div>
 

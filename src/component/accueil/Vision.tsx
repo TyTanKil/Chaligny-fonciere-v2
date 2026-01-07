@@ -55,13 +55,13 @@ export default function Vision() {
           viewport={{ once: true, amount: 0.3 }}
           className="flex justify-center"
         >
-          <p className="font-[Montserrat] text-center text-darkblue 2xl:text-3xl xl:text-2xl">
+          <p className="font-[Montserrat] text-center text-darkblue 2xl:text-3xl xl:text-xl">
             Foncière Chaligny s’appuie sur une expertise immobilière intégrée
             couvrant l’ensemble du cycle d’investissement : acquisition,
             gestion, structuration financière et valorisation.
           </p>
         </motion.div>
-        <div className="relative w-full py-8">
+        <div className="relative w-full py-4">
           {/* Ligne horizontale */}
           <div
             className="absolute top-1/2 left-0 h-1 bg-darkblue -translate-y-1/2 -ml-20"
@@ -141,7 +141,7 @@ export default function Vision() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
           viewport={{ once: true }}
-          className="flex flex-col items-center text-center text-beige text-4xl font-bold font-[Montserrat]"
+          className="flex flex-col items-center text-center text-beige 2xl:text-4xl xl:text-xl font-bold font-[Montserrat]"
         >
           <motion.span
             initial={{ opacity: 0, y: 20 }}
@@ -157,7 +157,7 @@ export default function Vision() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.6 }}
             viewport={{ once: true }}
-            className="text-darkblue text-2xl font-normal"
+            className="text-darkblue 2xl:text-2xl xl:text-lg font-normal"
           >
             Identification et acquisition d’actifs immobiliers à fort potentiel
             sur le marché parisien et francilien.
@@ -168,7 +168,7 @@ export default function Vision() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.7 }}
             viewport={{ once: true }}
-            className="mt-10"
+            className="mt-10 xl:mt-6"
           >
             GESTION
           </motion.span>
@@ -178,7 +178,7 @@ export default function Vision() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.8 }}
             viewport={{ once: true }}
-            className="text-darkblue text-2xl font-normal"
+            className="text-darkblue 2xl:text-2xl xl:text-xl font-normal"
           >
             Pilotage locatif, suivi opérationnel et valorisation des actifs dans
             la durée.
@@ -189,7 +189,7 @@ export default function Vision() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.9 }}
             viewport={{ once: true }}
-            className="mt-10"
+            className="mt-10 xl:mt-6"
           >
             STRUCTURATION FINANCIÈRE
           </motion.span>
@@ -199,7 +199,7 @@ export default function Vision() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 1 }}
             viewport={{ once: true }}
-            className="text-darkblue text-2xl font-normal"
+            className="text-darkblue 2xl:text-2xl xl:text-xl font-normal"
           >
             Montage des opérations, levées de fonds et optimisation des
             rendements pour les investisseurs.
