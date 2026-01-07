@@ -9,12 +9,14 @@ import ProcessTimeline from "@/component/general/TimeLineVision";
 import { motion } from "framer-motion";
 import { Toggle } from "@/component/general/Toggle";
 import ExpertSection from "@/component/general/ExpertSection";
+import Navbar from "@/component/general/NavBar";
 
 export default function Vision() {
   const [activePage, setActivePage] = useState(false);
   return (
     <div>
-      <motion.div className="w-full flex flex-col items-center gap-6 p-6">
+      <Navbar />
+      <motion.div className="w-full flex flex-col items-center gap-6 p-6 mt-15">
         {/* HEADER */}
         <motion.div
           className="flex items-center gap-10"
@@ -48,7 +50,7 @@ export default function Vision() {
           </Link>
 
           <motion.h1
-            className="text-7xl text-darkblue transition-colors duration-500"
+            className="text-7xl xl:text-6xl text-darkblue transition-colors duration-500"
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1 }}
@@ -61,7 +63,7 @@ export default function Vision() {
         </motion.div>
 
         <motion.div
-          className="w-full flex justify-center uppercase font-[Montserrat] text-lightgreen text-3xl p-10 -translate-x-1/5"
+          className="w-full flex justify-center uppercase font-[Montserrat] text-lightgreen 2xl:text-3xl xl:text-xl p-10 -translate-x-1/5"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
@@ -72,7 +74,7 @@ export default function Vision() {
 
         {/* Stats */}
         <motion.div
-          className="w-full flex font-[Montserrat]"
+          className="w-full flex flex-wrap justify-center font-[Montserrat]"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
@@ -97,13 +99,13 @@ export default function Vision() {
           ].map((stat, i) => (
             <motion.div
               key={i}
-              className="w-1/3 flex flex-col justify-center items-center"
+              className="w-full sm:w-1/2 md:w-1/3 flex flex-col justify-start items-center mb-10"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7 }}
             >
-              <div className="text-6xl text-darkblue">
+              <div className="2xl:text-6xl xl:text-4xl text-darkblue text-center">
                 {stat.prefix && (
                   <span className="text-lightgreen">{stat.prefix}</span>
                 )}
@@ -115,14 +117,12 @@ export default function Vision() {
                 />
                 {stat.suffix && <span>{stat.suffix}</span>}
               </div>
-              <span className="w-1/2 flex text-center text-lightgreen text-2xl">
+              <span className="text-center text-lightgreen 2xl:text-2xl xl:text-xl mt-2">
                 {stat.text}
               </span>
             </motion.div>
           ))}
         </motion.div>
-
-        <div className="h-32"></div>
 
         {/* Toggle */}
         <motion.div
@@ -138,7 +138,7 @@ export default function Vision() {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="flex justify-center items-center py-4"
+            className="flex justify-center items-center"
           >
             <Toggle
               active={activePage}

@@ -158,6 +158,7 @@ export default function Contact() {
           className="flex justify-center text-lightgreen text-2xl font-[Montserrat] gap-4 my-10"
         >
           <p>contact@foncièrechaligny.com</p>
+          <p>|</p>
           <p>06 70 49 85 82</p>
         </motion.div>
       </div>

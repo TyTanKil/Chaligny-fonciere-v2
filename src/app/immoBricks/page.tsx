@@ -2,11 +2,13 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
+import Navbar from "@/component/general/NavBar";
 
 export default function ImmoBricks() {
   return (
     <div>
-      <div className="w-full flex flex-col items-center gap-6 p-6">
+      <div className="w-full flex flex-col items-center gap-6 p-6 mt-15">
+        <Navbar />
         {/* HEADER */}
         <motion.div
           initial={{ opacity: 0, y: -30 }}
@@ -43,7 +45,7 @@ export default function ImmoBricks() {
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-7xl text-darkblue transition-colors duration-500"
+            className="text-7xl xl:text-6xl text-darkblue transition-colors duration-500"
           >
             Immo Bricks
           </motion.h1>
@@ -117,7 +119,7 @@ export default function ImmoBricks() {
           viewport={{ once: true, amount: 0.2 }}
           src="/13.png"
           alt="Illustration"
-          className="absolute 2xl:right-30 xl:right-0 2xl:w-170 xl:w-140 2xl:h-190 xl:h-140 object-cover"
+          className="absolute 2xl:right-30 xl:right-0 2xl:w-170 xl:w-140 2xl:h-190 xl:h-140 object-cover z-0"
         />
       </div>
 
@@ -127,9 +129,9 @@ export default function ImmoBricks() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7 }}
         viewport={{ once: true, amount: 0.3 }}
-        className="w-full py-30 h-100"
+        className="w-full h-100 z-50"
       >
-        <div className="w-5/6 text-darkblue font-[Montserrat] bg-lightgreen h-120 space-y-6 p-16">
+        <div className="w-5/6 text-darkblue font-[Montserrat] bg-lightgreen h-120 space-y-6 p-16 ">
           <motion.p
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}

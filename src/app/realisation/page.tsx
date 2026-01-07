@@ -3,6 +3,7 @@
 import Link from "next/link";
 import ProjectCard from "@/component/general/RealisationCard";
 import { motion } from "framer-motion";
+import Navbar from "@/component/general/NavBar";
 
 export default function Realisation() {
   const projects = [
@@ -46,7 +47,8 @@ export default function Realisation() {
 
   return (
     <div>
-      <motion.div className="w-full flex flex-col items-center gap-6 p-6">
+      <motion.div className="w-full flex flex-col items-center gap-6 p-6 mt-15">
+        <Navbar/>
         {/* HEADER */}
         <motion.div
           className="flex items-center gap-10"
@@ -80,7 +82,7 @@ export default function Realisation() {
           </Link>
 
           <motion.h1
-            className="text-7xl text-darkblue italic text-lightgreen transition-colors duration-500"
+            className="text-7xl xl:text-6xl text-darkblue italic text-lightgreen transition-colors duration-500"
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1 }}

@@ -2,11 +2,13 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
+import Navbar from "@/component/general/NavBar";
 
 export default function Investir() {
   return (
     <div className="bg-beige">
-      <div className="w-full flex flex-col items-center gap-6 p-6">
+      <Navbar/>
+      <div className="w-full flex flex-col items-center gap-6 p-6 mt-15">
         {/* HEADER */}
         <motion.div
           className="flex items-center gap-10"
@@ -40,7 +42,7 @@ export default function Investir() {
           </Link>
 
           <motion.h1
-            className="text-7xl text-darkblue italic text-lightgreen transition-colors duration-500"
+            className="text-7xl xl:text-6xl text-darkblue italic text-lightgreen transition-colors duration-500"
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1 }}
@@ -107,7 +109,7 @@ export default function Investir() {
         viewport={{ once: true }}
         transition={{ duration: 1 }}
       >
-        <span className="w-1/3 p-5 bg-white font-[Montserrat] text-center text-darkblue z-50">
+        <span className="w-1/3 p-5 bg-white font-[Montserrat] text-center text-darkblue z-40">
           Notre ambition est d’offrir à nos investisseurs un cadre
           d’investissement clair, structuré et sécurisé pour développer leur
           patrimoine immobilier. <br />
@@ -120,7 +122,7 @@ export default function Investir() {
       </motion.div>
 
       <motion.div
-        className="w-full flex justify-end font-[Montserrat] text-darkblue text-3xl p-10 px-50 mt-30"
+        className="w-full flex justify-end font-[Montserrat] text-darkblue text-3xl p-10 px-50 mt-10"
         initial={{ opacity: 0, x: 50 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}

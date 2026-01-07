@@ -61,44 +61,46 @@ export function TeamCarousel({
   `}
     >
       {/* TEXTE */}
-      <div className="relative max-w-lg text-center">
+      <div className="relative max-w-lg text-center min-h-[260px] flex flex-col items-center">
         <button
           onClick={prev}
-          className="absolute -left-14 top-1/2 -translate-y-1/2 text-3xl"
+          className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-14 text-3xl"
         >
           <FaChevronLeft />
         </button>
 
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={member.id}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.5 }}
-          >
-            <h3 className="text-xl text-darkblue font-[Montserrat] font-bold uppercase">
-              {member.name}
-            </h3>
+        <div className="w-full">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={member.id}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.5 }}
+            >
+              <h3 className="text-xl text-darkblue font-[Montserrat] font-bold uppercase">
+                {member.name}
+              </h3>
 
-            <p className="text-lg text-lightgreen font-[Montserrat] font-medium mt-1">
-              {member.role}
-            </p>
+              <p className="text-lg text-lightgreen font-[Montserrat] font-medium mt-1">
+                {member.role}
+              </p>
 
-            <p className="mt-6 text-darkblue font-[Montserrat]">
-              {member.description}
-            </p>
-          </motion.div>
-        </AnimatePresence>
+              <p className="mt-6 text-darkblue font-[Montserrat]">
+                {member.description}
+              </p>
+            </motion.div>
+          </AnimatePresence>
+        </div>
 
         <button
           onClick={next}
-          className="absolute -right-14 top-1/2 -translate-y-1/2 text-3xl"
+          className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-14 text-3xl"
         >
           <FaChevronRight />
         </button>
-        {children}
       </div>
+      {children}
 
       {/* IMAGE */}
       <div

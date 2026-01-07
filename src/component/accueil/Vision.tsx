@@ -71,7 +71,12 @@ export default function Vision() {
           {/* Étapes */}
           <div className="relative flex justify-center gap-10 z-10 font-[Montserrat]">
             <motion.div
-              className="w-72 h-32 p-4 text-center bg-darkblue text-beige flex items-center justify-center"
+              className="
+    w-72 h-32 p-4
+    bg-darkblue text-beige text-center
+    grid grid-rows-[3rem_1fr]
+    items-center
+  "
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -79,88 +84,55 @@ export default function Vision() {
               whileHover={{ scale: 1.05 }}
             >
               <motion.p
+                className="text-lightgreen text-4xl leading-none flex items-end justify-center"
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: 0.3 }}
                 viewport={{ once: true }}
-                className="text-lightgreen text-4xl break-words"
               >
                 +{" "}
-                <span>
-                  <CountUp
-                    end={20}
-                    duration={6}
-                    enableScrollSpy
-                    scrollSpyOnce
-                  />{" "}
-                  ans
-                </span>
-                <br />
-                <span className="text-beige text-base">
-                  d'expertise immobilières sur le marché parisien
-                </span>
+                <CountUp end={20} duration={6} enableScrollSpy scrollSpyOnce />{" "}
+                ans
               </motion.p>
+
+              <p className="text-beige text-base leading-tight">
+                d'expertise immobilières sur le marché parisien
+              </p>
             </motion.div>
             <motion.div
-              className="w-72 h-32 p-4 text-center bg-darkblue text-beige flex items-center justify-center"
+              className="w-72 h-32 p-4 bg-darkblue text-beige text-center grid grid-rows-[3rem_1fr] items-center"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
               whileHover={{ scale: 1.05 }}
             >
-              <motion.p
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: 0.3 }}
-                viewport={{ once: true }}
-                className="text-lightgreen text-4xl break-words"
-              >
+              <motion.p className="text-lightgreen text-4xl leading-none flex items-end justify-center">
                 +{" "}
-                <span>
-                  <CountUp
-                    end={300}
-                    duration={6}
-                    enableScrollSpy
-                    scrollSpyOnce
-                  />{" "}
-                  M€
-                </span>
-                <br />
-                <span className="text-beige text-base">
-                  de financements intermédiés
-                </span>
+                <CountUp end={300} duration={6} enableScrollSpy scrollSpyOnce />{" "}
+                M€
               </motion.p>
+
+              <p className="text-beige text-base leading-tight">
+                de financements intermédiés
+              </p>
             </motion.div>
             <motion.div
-              className="w-72 h-32 p-4 text-center bg-darkblue text-beige flex items-center justify-center"
+              className="w-72 h-32 p-4 bg-darkblue text-beige text-center grid grid-rows-[3rem_1fr] items-center"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
               whileHover={{ scale: 1.05 }}
             >
-              <motion.p
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: 0.3 }}
-                viewport={{ once: true }}
-                className="text-lightgreen text-4xl break-words"
-              >
-                <span>
-                  <CountUp
-                    end={150}
-                    duration={6}
-                    enableScrollSpy
-                    scrollSpyOnce
-                  />{" "}
-                  M€
-                </span>
-                <br />
-                <span className="text-beige text-base">
-                  d'actifs intermédiés
-                </span>
+              <motion.p className="text-lightgreen text-4xl leading-none flex items-end justify-center">
+                <CountUp end={150} duration={6} enableScrollSpy scrollSpyOnce />{" "}
+                M€
               </motion.p>
+
+              <p className="text-beige text-base leading-tight">
+                d'actifs intermédiés
+              </p>
             </motion.div>
           </div>
         </div>

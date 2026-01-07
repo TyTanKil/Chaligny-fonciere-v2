@@ -35,7 +35,7 @@ const pillars = [
 
 export default function PillarsSection() {
   return (
-    <div className="flex p-8 w-full h-175 items-stretch">
+    <div className="flex p-8 w-full h-170 items-stretch justify-center">
       {pillars.map((pillar) => (
         <PillarCard key={pillar.id} {...pillar} />
       ))}
@@ -54,17 +54,17 @@ function PillarCard({ title, content, label }: PillarCardProps) {
     <motion.article
       whileHover={{ scale: 1.15 }}
       transition={{ duration: 0.35, ease: "easeOut" }}
-      className="relative flex flex-1 flex-col justify-between px-8 py-10 font-[Montserrat]"
+      className="relative flex 2xl:w-100 xl:w-80 flex-col justify-between px-8 py-10 font-[Montserrat]"
     >
       {/* Ligne verticale */}
       <div className="absolute left-2 top-6 bottom-6 w-[2px] bg-darkblue" />
 
       {/* Contenu */}
       <div className="pl-6">
-        <h3 className="mb-4 2xl:text-3xl xl:text-2xl font-medium uppercase tracking-wide text-beige">
+        <h3 className="mb-4 2xl:text-2xl xl:text-xl font-medium uppercase tracking-wide text-beige">
           {title}
         </h3>
-        <p className="2xl:text-2xl xl:text-xl leading-relaxed text-darkblue whitespace-pre-line">
+        <p className="2xl:text-xl xl:text-lg leading-relaxed text-darkblue whitespace-pre-line">
           {content}
         </p>
       </div>

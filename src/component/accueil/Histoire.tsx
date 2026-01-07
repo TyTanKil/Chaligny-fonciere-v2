@@ -41,7 +41,7 @@ export default function Histoire() {
               />
             </svg>
 
-            <h1 className="2xl:text-7xl xl:text-5xl text-darkblue">
+            <h1 className="2xl:text-7xl xl:text-5xl lg:text-3xl text-darkblue">
               Notre <span className="text-lightgreen italic">Histoire</span>
             </h1>
           </motion.div>
@@ -100,7 +100,7 @@ export default function Histoire() {
               viewport={{ once: true }}
             >
               <Link href="/histoire">
-                <button className="inline-block bg-beige text-darkblue underline mt-20 p-2 hover:bg-darkblue hover:text-beige transition">
+                <button className="inline-block bg-beige text-darkblue underline p-2 hover:bg-darkblue hover:text-beige transition">
                   Notre histoire
                 </button>
               </Link>
@@ -114,7 +114,13 @@ export default function Histoire() {
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.3 }}
           viewport={{ once: true, amount: 0.3 }}
-          className="relative h-[250px] sm:h-[350px] md:h-[450px] lg:h-[550px] xl:h-[650px] 2xl:h-[800px] mt-10"
+          className="relative h-[250px] w-[250px] 
+                              sm:h-[350px] sm:w-[350px]
+                              md:h-[450px] md:w-[450px] 
+                              lg:h-[500px] lg:w-[500px]
+                              xl:h-[550px] xl:w-[550px] 
+                              2xl:h-[600px] 
+                              mt-10"
         >
           <Image
             src="/Bordeaux.png"
