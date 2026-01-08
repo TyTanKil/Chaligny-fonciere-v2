@@ -3,9 +3,9 @@ type ProjectCardProps = {
   imageAlt: string;
   title: string;
   description: string[];
-  backgroundColor: string; 
-  titleColor: string;      
-  descriptionColor: string; 
+  backgroundColor: string;
+  titleColor: string;
+  descriptionColor: string;
 };
 
 export default function ProjectCard({
@@ -20,15 +20,14 @@ export default function ProjectCard({
   return (
     <article
       className={`
-        w-full max-w-sm sm:max-w-md md:max-w-lg
-        h-200 sm:h-140 md:h-140 
+        w-full max-w-xs sm:max-w-sm md:max-w-md
         flex flex-col font-[Montserrat] 
-        ${backgroundColor} p-4 sm:p-5 md:p-6  shadow-md
+        ${backgroundColor} p-3 sm:p-4 md:p-5 shadow-md
         transition-transform hover:scale-105
       `}
     >
       {/* Image */}
-      <div className="w-full 2xl: h-48 sm:h-56 md:h-64 overflow-hidden ">
+      <div className="w-full h-40 sm:h-48 md:h-56 overflow-hidden rounded-md">
         <img
           src={imageSrc}
           alt={imageAlt}
@@ -37,15 +36,15 @@ export default function ProjectCard({
       </div>
 
       {/* Contenu */}
-      <div className="flex flex-col gap-4 p-3 sm:p-5">
+      <div className="flex flex-col gap-2 sm:gap-3 md:gap-4 mt-2 sm:mt-3 md:mt-4">
         <h3
-          className={`text-base sm:text-lg md:text-xl font-semibold uppercase tracking-wide ${titleColor}`}
+          className={`text-sm sm:text-base md:text-lg font-semibold uppercase tracking-wide ${titleColor}`}
         >
           {title}
         </h3>
 
         <div
-          className={`space-y-2 sm:space-y-3 text-sm sm:text-base md:text-lg leading-relaxed ${descriptionColor}`}
+          className={`space-y-1 sm:space-y-2 md:space-y-3 text-xs sm:text-sm md:text-base leading-snug sm:leading-relaxed md:leading-relaxed ${descriptionColor}`}
         >
           {description.map((paragraph, index) => (
             <p key={index}>{paragraph}</p>

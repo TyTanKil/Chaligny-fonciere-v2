@@ -16,10 +16,10 @@ export default function Vision() {
   return (
     <div>
       <Navbar />
-      <motion.div className="w-full flex flex-col items-center gap-6 p-6 mt-15">
+      <motion.div className="w-full flex flex-col items-center gap-6 p-6 mt-20">
         {/* HEADER */}
         <motion.div
-          className="flex items-center gap-10"
+          className="flex flex-col sm:flex-row items-center gap-4 sm:gap-10 text-center sm:text-left"
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
@@ -50,7 +50,7 @@ export default function Vision() {
           </Link>
 
           <motion.h1
-            className="text-7xl xl:text-6xl text-darkblue transition-colors duration-500"
+            className="text-4xl sm:text-6xl xl:text-7xl text-darkblue mt-2 sm:mt-0"
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1 }}
@@ -62,14 +62,17 @@ export default function Vision() {
           </motion.h1>
         </motion.div>
 
+        {/* Sous-titre */}
         <motion.div
-          className="w-full flex justify-center uppercase font-[Montserrat] text-lightgreen 2xl:text-3xl xl:text-xl p-10 -translate-x-1/5"
+          className="w-full flex justify-center uppercase font-[Montserrat] text-lightgreen text-xl sm:text-2xl md:text-3xl p-4 sm:p-10"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 1 }}
         >
-          <h1>Expertise immobilière intégrée à Paris</h1>
+          <h1 className="text-center">
+            Expertise immobilière intégrée à Paris
+          </h1>
         </motion.div>
 
         {/* Stats */}
@@ -99,13 +102,13 @@ export default function Vision() {
           ].map((stat, i) => (
             <motion.div
               key={i}
-              className="w-full sm:w-1/2 md:w-1/3 flex flex-col justify-start items-center mb-10"
+              className="w-full sm:w-1/2 md:w-1/3 flex flex-col justify-start items-center mb-6 sm:mb-10 px-4"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7 }}
             >
-              <div className="2xl:text-6xl xl:text-4xl text-darkblue text-center">
+              <div className="text-3xl sm:text-4xl md:text-5xl 2xl:text-6xl text-darkblue text-center">
                 {stat.prefix && (
                   <span className="text-lightgreen">{stat.prefix}</span>
                 )}
@@ -117,14 +120,14 @@ export default function Vision() {
                 />
                 {stat.suffix && <span>{stat.suffix}</span>}
               </div>
-              <span className="text-center text-lightgreen 2xl:text-2xl xl:text-xl mt-2">
+              <span className="text-center text-lightgreen text-sm sm:text-lg md:text-xl mt-2">
                 {stat.text}
               </span>
             </motion.div>
           ))}
         </motion.div>
 
-        {/* Toggle */}
+        {/* Toggle + Experts */}
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -133,12 +136,13 @@ export default function Vision() {
             hidden: {},
             visible: { transition: { staggerChildren: 0.2 } },
           }}
+          className="w-full flex flex-col items-center"
         >
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="flex justify-center items-center"
+            className="flex justify-center items-center mb-6"
           >
             <Toggle
               active={activePage}
@@ -153,52 +157,57 @@ export default function Vision() {
               rightLabel={<span className="text-darkblue">Ivan Vaudry</span>}
             />
           </motion.div>
-          {!activePage && (
-            <ExpertSection
-              eyebrow={`Laurent et Éléonore\nExperts de l’immobilier parisien`}
-              title="Immobiliers résidentiel et opérationnel"
-              paragraphs={[
-                <>
-                  Associés dans la vie comme dans les affaires, Laurent et
-                  Éléonore travaillent ensemble depuis plus de 15 ans dans
-                  l’immobilier résidentiel et opérationnel à Paris.
-                </>,
-                <>
-                  Spécialistes reconnus de la transaction immobilière et de la
-                  gestion d’actifs, ils ont développé un modèle immobilier
-                  intégré permettant de maîtriser toute la chaîne de valeur :{" "}
-                  <strong>
-                    vente, location, gestion locative, syndic de copropriété et
-                    diagnostics immobiliers.
-                  </strong>
-                </>,
-                <>
-                  Cette expertise terrain permet une analyse fine du marché
-                  immobilier parisien, une détection précise des opportunités
-                  d’investissement et une exécution rapide, efficace et humaine
-                  à chaque étape du projet.
-                </>,
-              ]}
-              imageSrc="/8.png"
-              imageAlt="Laurent et Éléonore"
-            />
-          )}
-          {activePage && (
-            <ExpertSection
-              eyebrow={`Ivan\nDirecteur Financier et Structuration`}
-              title="Structuration et stratégie patrimoniale"
-              paragraphs={[
-                "Ivan évolue depuis plus de 20 ans dans la finance d’investissement. Après de nombreuses expériences, il fonde Berlioz Capital, un cabinet spécialisé dans les solutions patrimoniales sur mesure.",
-                "Au sein de Foncière Chaligny, Ivan apporte une expertise pointue en structuration financière, en levée de fonds et en gouvernance, contribuant à la solidité et à la cohérence des stratégies d’investissement immobilier.",
-              ]}
-              imageSrc="/4.png"
-              imageAlt="Laurent et Éléonore"
-            />
-          )}
+
+          {/* Experts */}
+          <div className="w-full px-4 sm:px-10">
+            {!activePage && (
+              <ExpertSection
+                eyebrow={`Laurent et Éléonore\nExperts de l’immobilier parisien`}
+                title="Immobiliers résidentiel et opérationnel"
+                paragraphs={[
+                  <>
+                    Associés dans la vie comme dans les affaires, Laurent et
+                    Éléonore travaillent ensemble depuis plus de 15 ans dans
+                    l’immobilier résidentiel et opérationnel à Paris.
+                  </>,
+                  <>
+                    Spécialistes reconnus de la transaction immobilière et de la
+                    gestion d’actifs, ils ont développé un modèle immobilier
+                    intégré permettant de maîtriser toute la chaîne de valeur :{" "}
+                    <strong>
+                      vente, location, gestion locative, syndic de copropriété
+                      et diagnostics immobiliers.
+                    </strong>
+                  </>,
+                  <>
+                    Cette expertise terrain permet une analyse fine du marché
+                    immobilier parisien, une détection précise des opportunités
+                    d’investissement et une exécution rapide, efficace et
+                    humaine à chaque étape du projet.
+                  </>,
+                ]}
+                imageSrc="/8.png"
+                imageAlt="Laurent et Éléonore"
+              />
+            )}
+            {activePage && (
+              <ExpertSection
+                eyebrow={`Ivan\nDirecteur Financier et Structuration`}
+                title="Structuration et stratégie patrimoniale"
+                paragraphs={[
+                  "Ivan évolue depuis plus de 20 ans dans la finance d’investissement. Après de nombreuses expériences, il fonde Berlioz Capital, un cabinet spécialisé dans les solutions patrimoniales sur mesure.",
+                  "Au sein de Foncière Chaligny, Ivan apporte une expertise pointue en structuration financière, en levée de fonds et en gouvernance, contribuant à la solidité et à la cohérence des stratégies d’investissement immobilier.",
+                ]}
+                imageSrc="/4.png"
+                imageAlt="Ivan Vaudry"
+              />
+            )}
+          </div>
         </motion.div>
 
+        {/* Stratégie */}
         <motion.div
-          className="w-full flex justify-center uppercase font-[Montserrat] text-lightgreen text-3xl p-10 2xl:-translate-x-1/8"
+          className="w-full flex justify-center uppercase font-[Montserrat] text-lightgreen text-xl sm:text-2xl md:text-3xl p-4 sm:p-10 text-center"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
@@ -214,20 +223,20 @@ export default function Vision() {
 
       {/* Call to action */}
       <motion.div
-        className="-bottom-25 -left-21 w-[75vw] bg-darkblue text-white px-14 py-10 flex items-center justify-between gap-12 z-20 shadow-xl"
+        className="w-full sm:w-[90%] max-w-[1200px] mx-auto bg-darkblue text-white px-6 sm:px-14 py-6 sm:py-10 flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-12 mt-10 rounded-lg shadow-xl"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 1 }}
       >
-        <p className="text-xl text-beige font-[Montserrat] font-bold max-w-md">
+        <p className="text-center sm:text-left text-base sm:text-xl text-beige font-[Montserrat] font-bold max-w-md">
           Nous investissons dans des actifs à fort potentiel, que nous
           transformons durablement grâce à une analyse précise du marché et une
           gestion opérationnelle maîtrisée.
         </p>
 
         <motion.button
-          className="border border-beige px-8 py-3 uppercase text-lg text-beige tracking-widest hover:bg-beige hover:text-darkblue transition"
+          className="border border-beige px-6 sm:px-8 py-3 uppercase text-base sm:text-lg text-beige tracking-widest hover:bg-beige hover:text-darkblue transition mt-4 sm:mt-0"
           whileHover={{ scale: 1.05 }}
           transition={{ type: "spring", stiffness: 300 }}
         >

@@ -3,15 +3,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { FaPhone } from "react-icons/fa6";
-import { FaLocationDot } from "react-icons/fa6";
-import { MdOutlineEmail } from "react-icons/md";
 
 export default function ImmoBricks() {
   return (
     <section
       data-section
-      className="h-screen snap-start bg-lightgreen flex flex-col"
+      className="min-h-screen snap-start bg-lightgreen flex flex-col"
     >
       {/* Titre avec SVG */}
       <motion.div
@@ -19,7 +16,7 @@ export default function ImmoBricks() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true, amount: 0.3 }}
-        className="flex items-center gap-10 pt-15 pl-15 pr-15 mt-5"
+        className="flex flex-col sm:flex-row items-center gap-6 sm:gap-10 pt-15 pl-6 sm:pl-15 pr-6 sm:pr-15 mt-5 text-center sm:text-left"
       >
         <motion.svg
           initial={{ opacity: 0, rotate: -10 }}
@@ -57,9 +54,10 @@ export default function ImmoBricks() {
         </motion.h1>
       </motion.div>
 
-      {/* Section centrale avec texte et image */}
-      <div className="flex flex-col mt-30">
-        <div className="flex justify-between text-darkblue font-[Montserrat] relative">
+      {/* Section centrale */}
+      <div className="flex flex-col mt-30 relative">
+        {/* Desktop : texte à gauche, image à droite */}
+        <div className="hidden lg:flex justify-between text-darkblue font-[Montserrat] relative">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -106,7 +104,69 @@ export default function ImmoBricks() {
             whileInView={{ opacity: 1, x: 0, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             viewport={{ once: true, amount: 0.2 }}
-            className="absolute right-0 top-[-5rem] w-[300px] h-[300px] md:w-[400px] md:h-[400px] lg:w-[800px] lg:h-[500px]"
+            className="absolute right-0 top-[-5rem] w-[300px] h-[300px]
+             md:w-[400px] md:h-[400px]
+             lg:w-[800px] lg:h-[500px]"
+          >
+            <Image
+              src="/5.png"
+              alt="ImmoBricks Illustration"
+              fill
+              style={{ objectFit: "cover" }}
+              priority
+            />
+          </motion.div>
+        </div>
+
+        {/* Mobile : texte puis image */}
+        <div className="flex flex-col lg:hidden items-center text-center gap-6 px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.3 }}
+            viewport={{ once: true, amount: 0.3 }}
+            className="bg-white flex flex-col justify-center items-center p-6 gap-4 w-full"
+          >
+            <motion.span
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              viewport={{ once: true }}
+              className="text-lg sm:text-xl"
+            >
+              Découvrez notre modèle d'investissement fractionné, fondé sur la
+              blockchain.
+            </motion.span>
+            <motion.span
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+              viewport={{ once: true }}
+              className="text-lg sm:text-xl font-bold"
+            >
+              Un accès simplifié à l'immobilier dès 2 000 €.
+            </motion.span>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, delay: 0.6 }}
+              viewport={{ once: true }}
+              className="flex justify-center mt-2"
+            >
+              <Link href="/immoBricks">
+                <button className="inline-block bg-beige text-2xl sm:text-3xl text-darkblue font-[Faustina] p-2 hover:bg-darkblue hover:text-beige transition">
+                  Découvrir le concept
+                </button>
+              </Link>
+            </motion.div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20, scale: 0.95 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{ duration: 0.7, delay: 0.5 }}
+            viewport={{ once: true, amount: 0.3 }}
+            className="w-full h-64 sm:h-80 md:h-96 mt-6 relative"
           >
             <Image
               src="/5.png"

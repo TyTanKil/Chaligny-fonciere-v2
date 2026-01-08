@@ -8,17 +8,18 @@ export default function Histoire() {
   return (
     <section
       data-section
-      className="h-screen snap-start flex justify-center items-center"
+      className="min-h-screen snap-start flex justify-center items-start overflow-hidden"
     >
-      <div className="grid grid-cols-2 h-full w-full p-15">
-        <div>
+      <div className="grid grid-cols-1 md:grid-cols-2 w-full p-5 md:p-15 gap-10">
+        {/* Texte */}
+        <div className="flex flex-col justify-center order-1 md:order-1">
           {/* Titre avec SVG */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true, amount: 0.3 }}
-            className="flex items-center gap-10 mt-5"
+            className="flex flex-col md:flex-row items-center gap-5 md:gap-10 mt-5 text-center md:text-left"
           >
             <svg
               width="90"
@@ -52,7 +53,7 @@ export default function Histoire() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true, amount: 0.3 }}
-            className="flex flex-col 2xl:text-2xl xl:text-lg gap-8 mt-10 p-10 font-[Montserrat]"
+            className="flex flex-col text-base sm:text-lg md:text-xl 2xl:text-2xl gap-6 mt-10 px-2 sm:px-10 font-[Montserrat]"
           >
             <motion.span
               initial={{ opacity: 0, y: 20 }}
@@ -98,6 +99,7 @@ export default function Histoire() {
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: 0.7 }}
               viewport={{ once: true }}
+              className="flex justify-center md:justify-start"
             >
               <Link href="/histoire">
                 <button className="inline-block bg-beige text-darkblue underline p-2 hover:bg-darkblue hover:text-beige transition">
@@ -114,13 +116,7 @@ export default function Histoire() {
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.3 }}
           viewport={{ once: true, amount: 0.3 }}
-          className="relative h-[250px] w-[250px] 
-                              sm:h-[350px] sm:w-[350px]
-                              md:h-[450px] md:w-[450px] 
-                              lg:h-[500px] lg:w-[500px]
-                              xl:h-[550px] xl:w-[550px] 
-                              2xl:h-[600px] 
-                              mt-10"
+          className="relative mx-auto order-2 aspect-square w-[250px] sm:w-[350px] md:w-[400px] lg:w-[450px] xl:w-[500px]"
         >
           <Image
             src="/Bordeaux.png"

@@ -8,7 +8,7 @@ export default function Investir() {
   return (
     <section
       data-section
-      className="h-screen snap-start bg-lightgreen flex flex-col"
+      className="min-h-screen snap-start bg-lightgreen flex flex-col"
     >
       {/* Titre avec SVG */}
       <motion.div
@@ -16,15 +16,15 @@ export default function Investir() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true, amount: 0.3 }}
-        className="flex items-start gap-10 pt-15 pl-15 pr-15 mt-5"
+        className="flex flex-col sm:flex-row items-center gap-6 sm:gap-10 p-6 sm:p-15 mt-5"
       >
         <motion.svg
           initial={{ opacity: 0, rotate: -10 }}
           whileInView={{ opacity: 1, rotate: 0 }}
           transition={{ duration: 0.7, delay: 0.2 }}
           viewport={{ once: true }}
-          width="90"
-          height="103"
+          width="70"
+          height="80"
           viewBox="0 0 406 465"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -48,7 +48,7 @@ export default function Investir() {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
-          className="2xl:text-7xl xl:text-5xl text-darkblue"
+          className="text-center sm:text-left 2xl:text-7xl xl:text-5xl text-darkblue"
         >
           Investir <span className="text-beige italic">avec nous</span>
           <br />
@@ -57,7 +57,7 @@ export default function Investir() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
             viewport={{ once: true }}
-            className="2xl:text-3xl xl:text-2xl text-beige font-bold font-[Montserrat]"
+            className="2xl:text-3xl xl:text-2xl text-beige font-bold font-[Montserrat] block mt-2"
           >
             Investir aux côtés d’une foncière immobilière indépendante à Paris
           </motion.span>
@@ -70,16 +70,17 @@ export default function Investir() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, delay: 0.3 }}
         viewport={{ once: true, amount: 0.2 }}
-        className="relative"
+        className="relative w-full overflow-x-auto sm:overflow-x-visible px-4 sm:px-0 py-6"
       >
         <PillarsSection />
+
         {/* Bouton */}
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, delay: 0.6 }}
           viewport={{ once: true }}
-          className="absolute bottom-6 right-8 font-[Faustina]"
+          className="flex justify-center sm:justify-end mt-6 sm:mt-0 font-[Faustina]"
         >
           <Link href="/investir">
             <button className="bg-beige text-2xl text-darkblue underline p-2 hover:bg-darkblue hover:text-beige transition">

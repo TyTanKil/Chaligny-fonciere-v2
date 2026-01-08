@@ -27,8 +27,15 @@ export default function TogglePage() {
             initial={{ opacity: 0, y: -30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="flex items-center gap-10"
+            className="
+    flex 
+    flex-col sm:flex-row  /* colonne sur mobile, ligne sur desktop */
+    items-center 
+    gap-4 sm:gap-10       /* moins d'espace sur mobile */
+    text-center sm:text-left  /* centré sur mobile, aligné à gauche sur desktop */
+  "
           >
+            {/* SVG */}
             <Link href="/">
               <motion.svg
                 whileHover={{ scale: 1.05, rotate: 2 }}
@@ -54,20 +61,21 @@ export default function TogglePage() {
               </motion.svg>
             </Link>
 
+            {/* Titre */}
             <motion.h1
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-7xl xl:text-6xl text-darkblue transition-colors duration-500"
+              className="text-5xl sm:text-7xl xl:text-6xl text-darkblue mt-2 sm:mt-0"
             >
               Notre{" "}
               <span
                 className={`
-          italic
-          transition-colors
-          duration-500
-          ${activePage ? "text-darkblue" : "text-lightgreen"}
-        `}
+        italic
+        transition-colors
+        duration-500
+        ${activePage ? "text-darkblue" : "text-lightgreen"}
+      `}
               >
                 Histoire
               </span>
@@ -109,152 +117,162 @@ export default function TogglePage() {
               transition={{ duration: 0.4, ease: "easeInOut" }}
               className="w-full"
             >
-              {/* CONTENU HISTOIRE */}
-              <section className="h-[90vh] relative overflow-visible">
-                {/* Image en arrière-plan */}
-                <motion.img
-                  initial={{ opacity: 0, x: 100, scale: 0.95 }}
-                  animate={{ opacity: 1, x: 0, scale: 1 }}
-                  transition={{ duration: 0.8, delay: 0.2 }}
-                  src="/6.png"
-                  alt="Photo histoire foncière Chaligny"
-                  className="
-      absolute
-      right-50
-      -top-10
-      2xl:h-[75%]
-      xl:h-[70%]
-      w-auto
-      object-cover
-      z-0
-      xl:translate-x-1/6
-      2xl:-translate-x-1/12
-      translate-y-1/3
-    "
-                />
-
-                {/* Bloc texte */}
-                <motion.div
-                  initial={{ opacity: 0, x: -50 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.7, delay: 0.3 }}
-                  className="
-      relative
-      z-10
-      ml-15
-      mt-10
-      flex
-      flex-col
-      space-y-10
-      bg-white
-      w-3/5
-      p-9
-      font-[Montserrat]
-      text-darkblue
-      2xl:text-2xl
-      xl:text-xl
-    "
-                >
-                  <motion.span
+              <section className="relative min-h-screen lg:h-[90vh] overflow-hidden">
+                {/* ===== MOBILE ===== */}
+                <div className="flex flex-col lg:hidden">
+                  {/* Image */}
+                  <motion.img
+                    src="/6.png"
+                    alt="Photo histoire foncière Chaligny"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 0.5 }}
-                    className="2xl:text-5xl
-      xl:text-4xl font-[Faustina] text-lightgreen "
-                  >
-                    Notre histoire{" "}
-                    <span className="text-darkblue">
-                      commence sur le terrain
-                    </span>
-                  </motion.span>
+                    transition={{ duration: 0.6 }}
+                    className="w-full h-64 object-cover"
+                  />
 
-                  <motion.span
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 0.6 }}
-                  >
-                    Foncière Chaligny est une foncière immobilière indépendante,
-                    fondée sur une conviction simple :
-                  </motion.span>
-                  <motion.span
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 0.6 }}
-                  >
-                    La performance durable repose sur la complémentarité des
-                    expertises, la confiance et une vision long terme de
-                    l’investissement immobilier.
-                  </motion.span>
+                  {/* Texte */}
+                  <div className="bg-white px-6 py-8 space-y-6 text-darkblue font-[Montserrat]">
+                    <h2 className="text-3xl font-[Faustina] text-lightgreen">
+                      Notre histoire{" "}
+                      <span className="text-darkblue">
+                        commence sur le terrain
+                      </span>
+                    </h2>
 
-                  <motion.span
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 0.7 }}
-                    className=""
-                  >
-                    Portée par trois fondateurs aux profils différents mais
-                    parfaitement alignés, Foncière Chaligny acquiert, développe
-                    et gère des actifs immobiliers avec une approche
-                    responsable, agile et ancrée dans la réalité du terrain,
-                    notamment sur le marché parisien et francilien.
-                  </motion.span>
-
-                  <motion.span
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 0.8 }}
-                    className=""
-                  >
-                    <span className="text-lightgreen font-bold">
-                      Notre promesse :{" "}
-                    </span>
-                    offrir à nos investisseurs une gestion transparente et
-                    exigeante, tournée vers la création de valeur durable dans
-                    le temps.
-                  </motion.span>
-
-                  <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.9 }}
-                    className="
-    absolute
-    2xl:-bottom-30
-    xl:-bottom-24
-    -left-21 
-    w-[75vw]
-    bg-darkblue
-    text-white
-    px-14
-    py-10
-    flex
-    items-center
-    justify-between
-    gap-12
-    z-20
-    shadow-xl
-  "
-                  >
-                    <p className="text-xl text-beige font-[Montserrat] font-bold max-w-md">
-                      Nos experts sont à votre écoute pour vous accompagner dans
-                      votre opération.
+                    <p>
+                      Foncière Chaligny est une foncière immobilière
+                      indépendante, fondée sur une conviction simple :
                     </p>
 
-                    <motion.button
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                      className="
-          border border-beige
-          px-8 py-3
-          uppercase text-lg text-beige font-[Faustina] tracking-widest
-          hover:bg-beige hover:text-darkblue
-          transition
-        "
-                    >
+                    <p>
+                      La performance durable repose sur la complémentarité des
+                      expertises, la confiance et une vision long terme de
+                      l’investissement immobilier.
+                    </p>
+
+                    <p>
+                      Portée par trois fondateurs aux profils différents mais
+                      parfaitement alignés, Foncière Chaligny acquiert,
+                      développe et gère des actifs immobiliers avec une approche
+                      responsable.
+                    </p>
+
+                    <p>
+                      <span className="text-lightgreen font-bold">
+                        Notre promesse :
+                      </span>{" "}
+                      offrir une gestion transparente et exigeante.
+                    </p>
+                  </div>
+
+                  {/* CTA */}
+                  <div className="bg-darkblue px-6 py-8 text-center space-y-4 font-[Montserrat]">
+                    <p className="text-beige font-bold">
+                      Nos experts sont à votre écoute pour vous accompagner.
+                    </p>
+
+                    <button className="border border-beige px-6 py-3 uppercase text-sm text-beige tracking-widest hover:bg-beige hover:text-darkblue transition">
                       Nous contacter
-                    </motion.button>
+                    </button>
+                  </div>
+                </div>
+
+                {/* ===== DESKTOP ===== */}
+                <div className="hidden lg:block">
+                  {/* Image flottante */}
+                  <motion.img
+                    src="/6.png"
+                    alt="Photo histoire foncière Chaligny"
+                    initial={{ opacity: 0, x: 100, scale: 0.95 }}
+                    animate={{ opacity: 1, x: 0, scale: 1 }}
+                    transition={{ duration: 0.8, delay: 0.2 }}
+                    className="
+          absolute
+          right-40
+          top-0
+          h-[70%]
+          object-cover
+          z-0
+        "
+                  />
+
+                  {/* Bloc texte */}
+                  <motion.div
+                    initial={{ opacity: 0, x: -50 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.7, delay: 0.3 }}
+                    className="
+          relative
+          z-10
+          ml-16
+          mt-16
+          w-3/5
+          bg-white
+          p-10
+          space-y-8
+          font-[Montserrat]
+          text-darkblue
+          xl:text-xl
+          2xl:text-2xl
+        "
+                  >
+                    <h2 className="text-4xl xl:text-5xl font-[Faustina] text-lightgreen">
+                      Notre histoire{" "}
+                      <span className="text-darkblue">
+                        commence sur le terrain
+                      </span>
+                    </h2>
+
+                    <p>
+                      Foncière Chaligny est une foncière immobilière
+                      indépendante, fondée sur une conviction simple :
+                    </p>
+
+                    <p>
+                      La performance durable repose sur la complémentarité des
+                      expertises, la confiance et une vision long terme de
+                      l’investissement immobilier.
+                    </p>
+
+                    <p>
+                      Portée par trois fondateurs aux profils différents mais
+                      parfaitement alignés, Foncière Chaligny développe des
+                      actifs responsables et durables.
+                    </p>
+
+                    <p>
+                      <span className="text-lightgreen font-bold">
+                        Notre promesse :
+                      </span>{" "}
+                      une création de valeur transparente et durable.
+                    </p>
+
+                    {/* CTA desktop */}
+                    <div
+                      className="
+            absolute
+            -bottom-24
+            -left-24
+            w-[75vw]
+            bg-darkblue
+            px-14
+            py-10
+            flex
+            justify-between
+            items-center
+            shadow-xl
+          "
+                    >
+                      <p className="text-beige font-bold max-w-md">
+                        Nos experts sont à votre écoute pour vous accompagner.
+                      </p>
+
+                      <button className="border border-beige px-8 py-3 uppercase text-lg text-beige tracking-widest hover:bg-beige hover:text-darkblue transition">
+                        Nous contacter
+                      </button>
+                    </div>
                   </motion.div>
-                </motion.div>
+                </div>
               </section>
             </motion.section>
           )}
@@ -268,158 +286,163 @@ export default function TogglePage() {
               transition={{ duration: 0.4, ease: "easeInOut" }}
               className="w-full"
             >
-              {/* CONTENU ÉQUIPE */}
-              <section className="h-[110vh] relative overflow-visible">
-                {/* Image en arrière-plan */}
-                <motion.img
-                  initial={{ opacity: 0, x: 100, scale: 0.95 }}
-                  animate={{ opacity: 1, x: 0, scale: 1 }}
-                  transition={{ duration: 0.8, delay: 0.2 }}
-                  src="/7.png"
-                  alt="Photo histoire foncière Chaligny"
-                  className="
-      absolute
-      right-50
-      -top-10
-      2xl:h-[75%]
-      xl:h-[70%]
-      w-auto
-      object-cover
-      z-0
-      xl:translate-x-1/6
-      2xl:-translate-x-1/12
-      xl:translate-y-2/5
-      2xl:translate-y-1/3
-    "
-                />
-
-                {/* Bloc texte */}
-                <motion.div
-                  initial={{ opacity: 0, x: -50 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.7, delay: 0.3 }}
-                  className="
-      relative
-      z-10
-      ml-15
-      mt-10
-      flex
-      flex-col
-      space-y-10
-      bg-white
-      w-3/5
-      p-9
-      font-[Montserrat]
-      text-darkblue
-      2xl:text-2xl
-      xl:text-xl
-    "
-                >
-                  <motion.span
+              <section className="relative min-h-screen lg:h-[110vh] overflow-hidden">
+                {/* ===== MOBILE ===== */}
+                <div className="flex flex-col lg:hidden">
+                  {/* Image */}
+                  <motion.img
+                    src="/7.png"
+                    alt="Équipe Foncière Chaligny"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 0.5 }}
-                    className="w-2/3 font-[Faustina]"
-                  >
-                    Notre <span className="text-lightgreen italic">Equipe</span>{" "}
-                    <br />
-                    <span className="font-[Montserrat] font-semibold text-darkbeige">
+                    transition={{ duration: 0.6 }}
+                    className="w-full h-64 object-cover"
+                  />
+
+                  {/* Texte */}
+                  <div className="bg-white px-6 py-8 space-y-6 font-[Montserrat] text-darkblue">
+                    <h2 className="text-3xl font-[Faustina]">
+                      Notre{" "}
+                      <span className="text-lightgreen italic">Équipe</span>
+                    </h2>
+
+                    <p className="font-semibold text-darkbeige">
                       Trois fondateurs, une même vision.
-                    </span>
-                  </motion.span>
-
-                  <motion.span
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 0.6 }}
-                    className="w-2/3"
-                  >
-                    <span className="font-bold">Éléonore Crevon</span>
-                    <br /> Co-fondatrice
-                    <br /> Elle porte l’approche humaine et la relation de
-                    confiance qui guident chaque projet immobilier.
-                  </motion.span>
-
-                  <motion.span
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 0.7 }}
-                    className="w-2/3"
-                  >
-                    <span className="font-bold">Laurent Da Costa</span>
-                    <br /> Co-fondateur
-                    <br /> Il garantit l’exigence opérationnelle et la fiabilité
-                    des opérations au cœur de la foncière.
-                  </motion.span>
-
-                  <motion.span
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 0.8 }}
-                    className="w-2/3"
-                  >
-                    <span className="font-bold">Ivan Varady</span>
-                    <br /> Co-fondateur
-                    <br /> Il apporte la vision stratégique et financière,
-                    assurant la cohérence des investissements dans le long
-                    terme.
-                  </motion.span>
-
-                  <motion.span
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 0.9 }}
-                    className="w-2/3"
-                  >
-                    Ensemble, ils incarnent les valeurs de Foncière Chaligny :
-                    <br />
-                    <span className="text-lightgreen font-bold italic">
-                      complémentarité, confiance et vision durable de
-                      l’investissement immobilier.
-                    </span>
-                  </motion.span>
-
-                  <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 1 }}
-                    className="
-    absolute
-    -bottom-25
-    -left-21 
-    w-[75vw]
-    bg-darkblue
-    text-white
-    px-14
-    py-10
-    flex
-    items-center
-    justify-between
-    gap-12
-    z-20
-    shadow-xl
-  "
-                  >
-                    <p className="text-xl text-beige font-[Montserrat] font-bold max-w-md">
-                      Nos experts sont à votre écoute pour vous accompagner dans
-                      votre opération.
                     </p>
 
-                    <motion.button
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                      className="
-          border border-beige
-          px-8 py-3
-          uppercase text-sm text-beige tracking-widest
-          hover:bg-beige hover:text-darkblue
-          transition
-        "
-                    >
+                    <p>
+                      <span className="font-bold">Éléonore Crevon</span>
+                      <br />
+                      Co-fondatrice — relation humaine et confiance au cœur de
+                      chaque projet.
+                    </p>
+
+                    <p>
+                      <span className="font-bold">Laurent Da Costa</span>
+                      <br />
+                      Co-fondateur — exigence opérationnelle et fiabilité des
+                      opérations.
+                    </p>
+
+                    <p>
+                      <span className="font-bold">Ivan Varady</span>
+                      <br />
+                      Co-fondateur — vision stratégique et financière long
+                      terme.
+                    </p>
+
+                    <p>
+                      <span className="text-lightgreen font-bold italic">
+                        Complémentarité, confiance et vision durable.
+                      </span>
+                    </p>
+                  </div>
+
+                  {/* CTA */}
+                  <div className="bg-darkblue px-6 py-8 text-center space-y-4 font-[Montserrat]">
+                    <p className="text-beige font-bold">
+                      Nos experts sont à votre écoute pour vous accompagner.
+                    </p>
+
+                    <button className="border border-beige px-6 py-3 uppercase text-sm text-beige tracking-widest hover:bg-beige hover:text-darkblue transition">
                       Nous contacter
-                    </motion.button>
+                    </button>
+                  </div>
+                </div>
+
+                {/* ===== DESKTOP ===== */}
+                <div className="hidden lg:block">
+                  {/* Image flottante */}
+                  <motion.img
+                    initial={{ opacity: 0, x: 100, scale: 0.95 }}
+                    animate={{ opacity: 1, x: 0, scale: 1 }}
+                    transition={{ duration: 0.8, delay: 0.2 }}
+                    src="/7.png"
+                    alt="Équipe Foncière Chaligny"
+                    className="
+          absolute
+          right-40
+          top-0
+          h-[70%]
+          object-cover
+          z-0
+        "
+                  />
+
+                  {/* Bloc texte */}
+                  <motion.div
+                    initial={{ opacity: 0, x: -50 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.7, delay: 0.3 }}
+                    className="
+          relative
+          z-10
+          ml-16
+          mt-16
+          w-3/5
+          bg-white
+          p-10
+          space-y-8
+          font-[Montserrat]
+          text-darkblue
+          xl:text-xl
+          2xl:text-2xl
+        "
+                  >
+                    <h2 className="text-4xl xl:text-5xl font-[Faustina]">
+                      Notre{" "}
+                      <span className="text-lightgreen italic">Équipe</span>
+                    </h2>
+
+                    <p className="font-semibold text-darkbeige">
+                      Trois fondateurs, une même vision.
+                    </p>
+
+                    <p>
+                      <span className="font-bold">Éléonore Crevon</span> —
+                      relation humaine et confiance.
+                    </p>
+
+                    <p>
+                      <span className="font-bold">Laurent Da Costa</span> —
+                      exigence opérationnelle.
+                    </p>
+
+                    <p>
+                      <span className="font-bold">Ivan Varady</span> — vision
+                      stratégique et financière.
+                    </p>
+
+                    <p className="text-lightgreen font-bold italic">
+                      Complémentarité, confiance et vision durable.
+                    </p>
+
+                    {/* CTA desktop */}
+                    <div
+                      className="
+            absolute
+            -bottom-24
+            -left-24
+            w-[75vw]
+            bg-darkblue
+            px-14
+            py-10
+            flex
+            justify-between
+            items-center
+            shadow-xl
+          "
+                    >
+                      <p className="text-beige font-bold max-w-md">
+                        Nos experts sont à votre écoute pour vous accompagner.
+                      </p>
+
+                      <button className="border border-beige px-8 py-3 uppercase text-sm text-beige tracking-widest hover:bg-beige hover:text-darkblue transition">
+                        Nous contacter
+                      </button>
+                    </div>
                   </motion.div>
-                </motion.div>
+                </div>
               </section>
             </motion.section>
           )}

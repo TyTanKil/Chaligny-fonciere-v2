@@ -11,7 +11,20 @@ import Navbar from "@/component/general/NavBar";
 
 export default function Home() {
   return (
-    <div className="scroll-container no-scrollbar h-screen overflow-y-scroll snap-y snap-mandatory scroll-smooth relative">
+    <div
+      className="
+        scroll-container 
+        no-scrollbar 
+        h-screen 
+        overflow-y-auto 
+        md:overflow-y-scroll 
+        snap-none 
+        md:snap-y 
+        md:snap-mandatory 
+        scroll-smooth 
+        relative
+      "
+    >
       <Navbar />
       <ScrollIndicator />
       <Logo />

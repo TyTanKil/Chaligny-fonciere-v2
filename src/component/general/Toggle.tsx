@@ -16,7 +16,16 @@ export function Toggle({
 }: ToggleProps) {
   return (
     <div
-      className="flex items-center gap-6 text-2xl select-none"
+      className="
+        flex 
+        items-center 
+        gap-4 
+        sm:gap-6 
+        text-xl sm:text-2xl 
+        select-none
+        flex-wrap
+        justify-center
+      "
       role="switch"
       aria-checked={active}
     >
@@ -38,20 +47,21 @@ export function Toggle({
         onClick={() => onToggle(!active)}
         className={`
           relative
-          h-6
-          w-14
+          h-5 sm:h-6
+          w-12 sm:w-14
           cursor-pointer
           rounded-full
-          p-1
+          p-[2px]
+          sm:p-1
           transition-colors
           ${active ? "bg-beige" : "bg-lightgreen"}
         `}
         aria-label="Changer de page"
       >
         <motion.div
-          className="h-4 w-4 rounded-full bg-darkblue"
+          className="h-4 w-4 sm:h-4 sm:w-4 rounded-full bg-darkblue"
           animate={{
-            x: active ? 32 : 0, // déplacement propre
+            x: active ? 28 : 0, // ajusté pour mobile
           }}
           transition={{
             type: "spring",

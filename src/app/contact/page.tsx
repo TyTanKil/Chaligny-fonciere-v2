@@ -9,25 +9,23 @@ import ContactSection from "@/component/general/ContactSection";
 
 export default function TogglePage() {
   const [activePage, setActivePage] = useState(false);
-  const logoColor = activePage ? "#363d40" : "#363d40";
+  const logoColor = "#363d40";
 
   return (
     <div
-      className={`
-    min-h-screen
-    transition-colors
-    duration-500
-    ${activePage ? "bg-lightgreen" : "bg-beige"}
-  `}
+      className={`min-h-screen transition-colors duration-500 ${
+        activePage ? "bg-lightgreen" : "bg-beige"
+      }`}
     >
       <Navbar />
+
+      {/* HEADER */}
       <div className="w-full flex flex-col items-center gap-6 p-6 mt-15">
-        {/* HEADER */}
         <motion.div
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="flex items-center gap-10"
+          className="flex flex-col lg:flex-col items-center justify-center gap-4 lg:gap-6"
         >
           <Link href="/">
             <motion.svg
@@ -55,44 +53,44 @@ export default function TogglePage() {
           </Link>
 
           <motion.h1
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="2xl:text-7xl xl:text-6xl text-darkblue transition-colors duration-500"
+            className="2xl:text-7xl xl:text-6xl text-darkblue text-center transition-colors duration-500"
           >
             <span
-              className={`
-          transition-colors
-          duration-500
-          ${activePage ? "text-darkblue" : "text-darkblue"}
-        `}
+              className={`transition-colors duration-500 ${
+                activePage ? "text-darkblue" : "text-darkblue"
+              }`}
             >
               Contact
             </span>
           </motion.h1>
         </motion.div>
-
-        {/* TOGGLE */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-        >
-          <Toggle
-            active={activePage}
-            onToggle={setActivePage}
-            leftLabel={
-              <span className={activePage ? "text-darkblue" : "text-darkblue"}>
-                Contact investisseur
-              </span>
-            }
-            rightLabel={
-              <span className="text-darkblue">Demande d'information</span>
-            }
-          />
-        </motion.div>
       </div>
 
+      {/* TOGGLE */}
+      <motion.div
+        className="px-4 sm:px-6 mt-6"
+        initial={{ opacity: 0, scale: 0.95 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.5, delay: 0.3 }}
+      >
+        <Toggle
+          active={activePage}
+          onToggle={setActivePage}
+          leftLabel={
+            <span className={activePage ? "text-darkblue" : "text-darkblue"}>
+              Contact investisseur
+            </span>
+          }
+          rightLabel={
+            <span className="text-darkblue">Demande d'information</span>
+          }
+        />
+      </motion.div>
+
+      {/* CONTENT */}
       <AnimatePresence mode="wait">
         {!activePage && (
           <motion.section
@@ -101,17 +99,17 @@ export default function TogglePage() {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: 40 }}
             transition={{ duration: 0.4, ease: "easeInOut" }}
-            className="w-full"
+            className="w-full px-4 sm:px-6"
           >
             <ContactSection
-        eyebrow="Contact Investisseur"
-        title="Échangeons sur votre projet d'investissement"
-        phone="06 70 49 85 82"
-        email="contact@foncierechaligny.com"
-        address="10 rue des champs Elysés"
-        srcImage="/14.png"
-        altImage="Contact investisseur"
-      />
+              eyebrow="Contact Investisseur"
+              title="Échangeons sur votre projet d'investissement"
+              phone="06 70 49 85 82"
+              email="contact@foncierechaligny.com"
+              address="10 rue des champs Elysés"
+              srcImage="/14.png"
+              altImage="Contact investisseur"
+            />
           </motion.section>
         )}
 
@@ -122,18 +120,17 @@ export default function TogglePage() {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -40 }}
             transition={{ duration: 0.4, ease: "easeInOut" }}
-            className="w-full"
+            className="w-full px-4 sm:px-6"
           >
-            {/* CONTENU ÉQUIPE */}
             <ContactSection
-        eyebrow="Demande d'information"
-        title="Recevez des informations détaillées sur nos solutions et nos actifs."
-        phone="06 70 49 85 82"
-        email="contact@foncierechaligny.com"
-        address="10 rue des champs Elysés"
-        srcImage="/15.png"
-        altImage="Contact investisseur"
-      />
+              eyebrow="Demande d'information"
+              title="Recevez des informations détaillées sur nos solutions et nos actifs."
+              phone="06 70 49 85 82"
+              email="contact@foncierechaligny.com"
+              address="10 rue des champs Elysés"
+              srcImage="/15.png"
+              altImage="Contact investisseur"
+            />
           </motion.section>
         )}
       </AnimatePresence>

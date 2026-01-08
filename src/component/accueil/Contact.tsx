@@ -1,21 +1,22 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
 export default function Contact() {
   return (
-    <section data-section className="snap-start bg-white flex flex-col p-10 space-y-4 overflow-x-hidden">
-      {/* Footer avec logo et informations de contact */}
-      <div className="flex">
+    <section
+      data-section
+      className="snap-start bg-white flex flex-col p-6 sm:p-10 space-y-6 overflow-x-hidden"
+    >
+      {/* Logo */}
+      <div className="flex justify-center sm:justify-start">
         <motion.svg
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.5 }}
           viewport={{ once: true }}
-          width="408"
-          height="144"
+          className="w-full max-w-xs sm:max-w-md"
           viewBox="0 0 592 209"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -102,66 +103,52 @@ export default function Contact() {
           />
         </motion.svg>
       </div>
-      <div>
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          viewport={{ once: true }}
-          className="flex flex-col text-lightgreen text-2xl font-[Montserrat] font-bold gap-4 my-10"
-        >
-          <p>Échangeons sur votre projet d'investissement immobilier</p>
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.9 }}
-          className="
-    -ml-10
-    w-[75vw]
-    bg-darkblue
-    text-white
-    px-14
-    py-10
-    flex
-    items-center
-    justify-between
-    gap-12
-    shadow-xl
-  "
-        >
-          <p className="text-xl text-beige font-[Montserrat] font-bold max-w-md">
-            Vous souhaitez investir dans l’immobilier à Paris ou en
-            Île-de-France ?
-          </p>
-          <Link href="/contact">
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="
-          border border-beige
-          px-8 py-3
-          uppercase text-lg text-beige font-[Faustina] tracking-widest
-          hover:bg-beige hover:text-darkblue
-          transition
-        "
-            >
-              Nous contacter
-            </motion.button>
-          </Link>
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          viewport={{ once: true }}
-          className="flex justify-center text-lightgreen text-2xl font-[Montserrat] gap-4 my-10"
-        >
-          <p>contact@foncièrechaligny.com</p>
-          <p>|</p>
-          <p>06 70 49 85 82</p>
-        </motion.div>
-      </div>
+
+      {/* Message principal */}
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.6 }}
+        viewport={{ once: true }}
+        className="text-center sm:text-left text-lightgreen text-2xl sm:text-3xl font-[Montserrat] font-bold gap-4 my-6"
+      >
+        <p>Échangeons sur votre projet d'investissement immobilier</p>
+      </motion.div>
+
+      {/* Call to action */}
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.9 }}
+        className="w-full bg-darkblue text-white px-6 sm:px-14 py-8 flex flex-col sm:flex-row items-center sm:items-start justify-center sm:justify-between gap-6 sm:gap-12 shadow-xl rounded-lg"
+      >
+        <p className="text-lg sm:text-xl text-beige font-[Montserrat] font-bold max-w-full sm:max-w-md text-center sm:text-left">
+          Vous souhaitez investir dans l’immobilier à Paris ou en Île-de-France
+          ?
+        </p>
+        <Link href="/contact">
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="border border-beige px-6 sm:px-8 py-3 uppercase text-lg text-beige font-[Faustina] tracking-widest hover:bg-beige hover:text-darkblue transition mt-4 sm:mt-0"
+          >
+            Nous contacter
+          </motion.button>
+        </Link>
+      </motion.div>
+
+      {/* Contact info */}
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 1.2 }}
+        viewport={{ once: true }}
+        className="flex flex-col sm:flex-row justify-center sm:justify-start text-lightgreen text-lg sm:text-2xl font-[Montserrat] gap-2 sm:gap-4 my-6 text-center sm:text-left"
+      >
+        <p>contact@foncièrechaligny.com</p>
+        <span className="hidden sm:inline">|</span>
+        <p>06 70 49 85 82</p>
+      </motion.div>
     </section>
   );
 }
