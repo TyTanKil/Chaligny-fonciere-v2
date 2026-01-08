@@ -19,7 +19,7 @@ export default function Equipe() {
           viewport={{ once: true, amount: 0.2 }}
         >
           <div className="flex flex-col items-center gap-10">
-            <TeamCarousel data={teamMembers} initialId={1} />
+            <TeamCarousel data={teamMembers} />
 
             <Link href="/equipe">
               <button className="mt-6 sm:mt-10 bg-beige text-3xl sm:text-4xl text-darkblue p-2 hover:bg-darkblue hover:text-beige transition">
