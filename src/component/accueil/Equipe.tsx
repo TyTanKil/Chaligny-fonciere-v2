@@ -21,7 +21,7 @@ export default function Equipe() {
           <div className="flex flex-col items-center gap-10">
             <TeamCarousel data={teamMembers} />
 
-            <Link href="/equipe">
+            <Link href="/vision">
               <button className="mt-6 sm:mt-10 bg-beige text-3xl sm:text-4xl text-darkblue p-2 hover:bg-darkblue hover:text-beige transition">
                 <span className="underline">S</span>avoir faire
               </button>

@@ -105,7 +105,7 @@ export default function Realisation() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
             viewport={{ once: true }}
-            className="2xl:text-7xl xl:text-5xl text-lightgreen italic"
+            className="2xl:text-7xl xl:text-5xl lg:text-3xl text-lightgreen italic"
           >
             Nous <span className="text-darkblue not-italic">réalisons</span>
             <br />

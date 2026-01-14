@@ -48,7 +48,7 @@ export default function ImmoBricks() {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
-          className="2xl:text-7xl xl:text-5xl text-beige italic"
+          className="2xl:text-7xl xl:text-5xl lg:text-3xl text-beige italic"
         >
           Immo <span className="text-darkblue not-italic">Bricks</span>
         </motion.h1>

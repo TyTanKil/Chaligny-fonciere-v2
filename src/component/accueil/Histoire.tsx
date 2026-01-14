@@ -8,9 +8,9 @@ export default function Histoire() {
   return (
     <section
       data-section
-      className="min-h-screen snap-start flex justify-center items-start overflow-hidden"
+      className="min-h-screen snap-start flex justify-center items-center overflow-hidden"
     >
-      <div className="grid grid-cols-1 md:grid-cols-2 w-full p-5 md:p-15 gap-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 w-full p-5 md:p-15 gap-10 items-center">
         {/* Texte */}
         <div className="flex flex-col justify-center order-1 md:order-1">
           {/* Titre avec SVG */}

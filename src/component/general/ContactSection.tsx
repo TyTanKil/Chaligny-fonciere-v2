@@ -22,7 +22,7 @@ export default function ContactSection({
   altImage,
 }: ContactSectionProps) {
   return (
-    <section className="relative flex justify-center overflow-hidden px-4 sm:px-6">
+    <section className="relative flex justify-center overflow-hidden px-4 sm:px-6 mt-5">
       <div className="relative flex w-full max-w-7xl flex-col lg:flex-row gap-10">
         {/* FORMULAIRE */}
         <motion.div
@@ -156,7 +156,7 @@ export default function ContactSection({
             viewport={{ once: true, amount: 0.3 }}
             className="relative w-full lg:w-[45%] mt-6 lg:mt-0 flex justify-center"
           >
-            <div className="overflow-hidden rounded-lg lg:rounded-tr-[120px] lg:rounded-br-[120px] bg-darkblue p-4 sm:p-6 lg:p-10">
+            <div className="overflow-hidden rounded-lg lg:rounded-tr-[120px] lg:rounded-br-[120px] p-4 sm:p-6 lg:p-10">
               <img
                 src={srcImage}
                 alt={altImage}

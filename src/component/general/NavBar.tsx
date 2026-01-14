@@ -10,14 +10,11 @@ export default function Navbar() {
   const pages = [
     { href: "/histoire", label: "Notre Histoire" },
     { href: "/vision", label: "Notre Vision" },
-    { href: "/investir", label: "Investissements" },
+    { href: "/investir", label: "Investir avec nous" },
     { href: "/realisation", label: "Nos réalisations" },
     { href: "/immoBricks", label: "ImmoBricks" },
-    { href: "tel:+33670498582", label: "06 70 49 85 82" },
-    {
-      href: "mailto:contact@foncierechaligny.com",
-      label: "contact@foncierechaligny.com",
-    },
+    { href: "/contact", label: "Contact" },
+    { href: "tel:+33670498582", label: "06 70 49 85 82" }
   ];
 
   /* 🔒 Lock scroll */

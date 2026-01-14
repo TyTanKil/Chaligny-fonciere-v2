@@ -235,13 +235,15 @@ export default function Vision() {
           gestion opérationnelle maîtrisée.
         </p>
 
-        <motion.button
-          className="border border-beige px-6 sm:px-8 py-3 uppercase text-base sm:text-lg text-beige tracking-widest hover:bg-beige hover:text-darkblue transition mt-4 sm:mt-0"
-          whileHover={{ scale: 1.05 }}
-          transition={{ type: "spring", stiffness: 300 }}
-        >
-          en savoir plus
-        </motion.button>
+        <Link href="/investir">
+          <motion.button
+            className="border border-beige px-6 sm:px-8 py-3 uppercase text-base sm:text-lg text-beige tracking-widest hover:bg-beige hover:text-darkblue transition mt-4 sm:mt-0"
+            whileHover={{ scale: 1.05 }}
+            transition={{ type: "spring", stiffness: 300 }}
+          >
+            en savoir plus
+          </motion.button>
+        </Link>
       </motion.div>
 
       <div className="h-32"></div>

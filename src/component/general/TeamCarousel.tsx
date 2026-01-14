@@ -3,7 +3,6 @@
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 type Member = {
   id: number;
@@ -34,43 +33,48 @@ export function TeamCarousel({ data, autoplayDelay = 5000 }: Props) {
   const member = data[index];
 
   return (
-    <div className="flex flex-col sm:flex-row items-center justify-center gap-12 sm:gap-16 px-4 sm:px-0">
+    <div className="flex flex-col sm:flex-row items-center justify-center gap-12 sm:gap-32 px-4 sm:px-0">
+      {/* TEXTE */}
       {/* TEXTE */}
       <div className="relative max-w-md sm:max-w-lg text-center sm:text-left flex flex-col items-center sm:items-start">
-        {/* Flèches desktop */}
-        <button
-          onClick={prev}
-          className="hidden sm:block absolute left-0 top-1/2 -translate-y-1/2 -translate-x-16 text-2xl sm:text-3xl z-20"
-        >
-          <FaChevronLeft />
-        </button>
+        {/* Contenu texte */}
+        <div className="w-full pb-16">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={member.id}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.5 }}
+            >
+              <h3 className="text-lg sm:text-xl text-darkblue font-[Montserrat] font-bold uppercase">
+                {member.name}
+              </h3>
+              <p className="text-md sm:text-lg text-lightgreen font-[Montserrat] font-medium mt-1">
+                {member.role}
+              </p>
+              <p className="mt-4 sm:mt-6 text-darkblue font-[Montserrat] text-sm sm:text-base">
+                {member.description}
+              </p>
+            </motion.div>
+          </AnimatePresence>
+        </div>
 
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={member.id}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.5 }}
-          >
-            <h3 className="text-lg sm:text-xl text-darkblue font-[Montserrat] font-bold uppercase">
-              {member.name}
-            </h3>
-            <p className="text-md sm:text-lg text-lightgreen font-[Montserrat] font-medium mt-1">
-              {member.role}
-            </p>
-            <p className="mt-4 sm:mt-6 text-darkblue font-[Montserrat] text-sm sm:text-base">
-              {member.description}
-            </p>
-          </motion.div>
-        </AnimatePresence>
-
-        <button
-          onClick={next}
-          className="hidden sm:block absolute right-0 top-1/2 -translate-y-1/2 translate-x-16 text-2xl sm:text-3xl z-20"
-        >
-          <FaChevronRight />
-        </button>
+        {/* Points FIXES */}
+        <div className="absolute bottom-0 left-0 right-0 flex justify-center gap-3">
+          {data.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setIndex(i)}
+              className={`h-3 w-3 rounded-full transition-all duration-300
+          ${
+            i === index
+              ? "bg-lightgreen scale-125"
+              : "bg-darkblue/30 hover:bg-darkblue/60"
+          }`}
+            />
+          ))}
+        </div>
       </div>
 
       {/* IMAGE */}

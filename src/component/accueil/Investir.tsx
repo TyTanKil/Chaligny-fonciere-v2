@@ -48,7 +48,7 @@ export default function Investir() {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
-          className="text-center sm:text-left 2xl:text-7xl xl:text-5xl text-darkblue"
+          className="text-center sm:text-left 2xl:text-7xl xl:text-5xl lg:text-3xl text-darkblue"
         >
           Investir <span className="text-beige italic">avec nous</span>
           <br />

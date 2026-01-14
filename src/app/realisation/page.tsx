@@ -134,13 +134,15 @@ export default function Realisation() {
             prochaine réussite était la vôtre ?
           </p>
 
-          <motion.button
-            className="border border-beige px-8 py-3 uppercase text-lg text-beige tracking-widest hover:bg-beige hover:text-darkblue transition"
-            whileHover={{ scale: 1.05 }}
-            transition={{ type: "spring", stiffness: 300 }}
-          >
-            Nous contacter
-          </motion.button>
+          <Link href="/contact">
+            <motion.button
+              className="border border-beige px-8 py-3 uppercase text-lg text-beige tracking-widest hover:bg-beige hover:text-darkblue transition"
+              whileHover={{ scale: 1.05 }}
+              transition={{ type: "spring", stiffness: 300 }}
+            >
+              Nous contacter
+            </motion.button>
+          </Link>
         </motion.div>
 
         <div className="h-32"></div>
@@ -227,12 +229,14 @@ export default function Realisation() {
             Nous avons déjà accompagné de nombreux investisseurs. Et si la
             prochaine réussite était la vôtre ?
           </p>
-          <motion.button
-            className="border border-beige px-5 py-2 uppercase text-sm xs:text-xs text-beige tracking-widest hover:bg-beige hover:text-darkblue transition"
-            whileHover={{ scale: 1.05 }}
-          >
-            Nous contacter
-          </motion.button>
+          <Link href="/contact">
+            <motion.button
+              className="border border-beige px-5 py-2 uppercase text-sm xs:text-xs text-beige tracking-widest hover:bg-beige hover:text-darkblue transition"
+              whileHover={{ scale: 1.05 }}
+            >
+              Nous contacter
+            </motion.button>
+          </Link>
         </motion.div>
       </div>
     </div>

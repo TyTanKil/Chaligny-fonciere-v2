@@ -82,7 +82,11 @@ export default function ImmoBricks() {
         <motion.img
           src="/13.png"
           alt="Illustration Immo Bricks"
-          className="w-full sm:w-3/4 lg:w-1/3 h-64 sm:h-80 lg:h-170 object-cover rounded-md"
+          className="
+    w-3/4 sm:w-2/3 lg:w-1/4 
+    h-3/4 sm:h-2/3 lg:h-1/4 
+    object-cover rounded-md
+  "
           initial={{ opacity: 0, x: 50, scale: 0.9 }}
           whileInView={{ opacity: 1, x: 0, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.3 }}
@@ -92,7 +96,7 @@ export default function ImmoBricks() {
 
       {/* Comment ça marche */}
       <motion.div
-        className="w-full flex justify-center px-6 lg:px-16 py-10"
+        className="w-full flex justify-center px-6 lg:px-16"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7 }}
@@ -142,18 +146,20 @@ export default function ImmoBricks() {
           transition={{ duration: 0.7 }}
           viewport={{ once: true }}
         >
-          <p className="text-base sm:text-lg lg:text-xl text-beige font-bold text-center lg:text-left max-w-md">
+          <p className="text-base sm:text-lg lg:text-xl text-beige font-bold font-[Montserrat] text-center lg:text-left max-w-md">
             Chaque transaction est enregistrée sur une blockchain, garantissant
             transparence, traçabilité et sécurité.
           </p>
 
-          <motion.button
-            className="border border-beige px-6 py-3 uppercase text-base sm:text-lg text-beige tracking-widest hover:bg-beige hover:text-darkblue transition rounded-md"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            Je veux investir
-          </motion.button>
+          <Link href="/contact">
+            <motion.button
+              className="border border-beige px-6 py-3 uppercase text-base sm:text-lg text-beige tracking-widest hover:bg-beige hover:text-darkblue transition rounded-md"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              Je veux investir
+            </motion.button>
+          </Link>
         </motion.div>
       </div>
 

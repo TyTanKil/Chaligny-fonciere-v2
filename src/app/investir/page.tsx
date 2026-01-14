@@ -71,11 +71,11 @@ export default function Investir() {
           {/* Ligne horizontale */}
           <div
             className="absolute top-1/2 left-0 h-px bg-darkblue -translate-y-1/2"
-            style={{ width: "calc(50% + 200px)" }}
+            style={{ width: "calc(40%)" }}
           />
 
           {/* Étapes */}
-          <div className="relative flex justify-center gap-6 z-10">
+          <div className="relative flex justify-start gap-6 z-10">
             {["Stabilité", "Performance Durable", "Simplicité de Gestion"].map(
               (step, i) => (
                 <motion.div
@@ -105,7 +105,7 @@ export default function Investir() {
         </div>
 
         <motion.div
-          className="flex justify-center py-30 z-10"
+          className="flex justify-center py-25 z-10"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
@@ -124,7 +124,7 @@ export default function Investir() {
         </motion.div>
 
         <motion.div
-          className="w-full flex justify-end font-[Montserrat] text-darkblue text-3xl p-10 px-50 mt-10"
+          className="w-full flex justify-end font-[Montserrat] text-darkblue text-3xl px-50"
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
@@ -133,7 +133,7 @@ export default function Investir() {
           <h1>Les atouts de notre modèle</h1>
         </motion.div>
 
-        <div className="relative w-full py-15">
+        <div className="relative w-full py-10">
           {/* Ligne horizontale */}
           <div
             className="absolute top-1/2 right-0 h-px bg-darkblue z-0"
@@ -170,13 +170,15 @@ export default function Investir() {
             actifs solides, maîtrisés et créateurs de valeur.
           </p>
 
-          <motion.button
-            className="border border-beige px-8 py-3 uppercase text-lg text-beige tracking-widest hover:bg-beige hover:text-darkblue transition"
-            whileHover={{ scale: 1.05 }}
-            transition={{ type: "spring", stiffness: 300 }}
-          >
-            je veux investir
-          </motion.button>
+          <Link href="/contact">
+            <motion.button
+              className="border border-beige px-8 py-3 uppercase text-lg text-beige tracking-widest hover:bg-beige hover:text-darkblue transition"
+              whileHover={{ scale: 1.05 }}
+              transition={{ type: "spring", stiffness: 300 }}
+            >
+              je veux investir
+            </motion.button>
+          </Link>
         </motion.div>
 
         <div className="h-32"></div>
@@ -316,12 +318,14 @@ export default function Investir() {
             Notre mission : vous permettre d’investir sereinement dans des
             actifs solides, maîtrisés et créateurs de valeur.
           </p>
-          <motion.button
-            className="border border-beige px-4 py-2 uppercase text-sm xs:text-xs text-beige tracking-widest hover:bg-beige hover:text-darkblue transition"
-            whileHover={{ scale: 1.05 }}
-          >
-            je veux investir
-          </motion.button>
+          <Link href="/contact">
+            <motion.button
+              className="border border-beige px-4 py-2 uppercase text-sm xs:text-xs text-beige tracking-widest hover:bg-beige hover:text-darkblue transition"
+              whileHover={{ scale: 1.05 }}
+            >
+              je veux investir
+            </motion.button>
+          </Link>
         </motion.div>
       </div>
     </div>
