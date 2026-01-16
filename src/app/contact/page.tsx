@@ -103,7 +103,7 @@ export default function TogglePage() {
           >
             <ContactSection
               eyebrow="Contact Investisseur"
-              title="Échangeons sur votre projet d'investissement"
+              title="Échangeons sur votre projet d'investissement."
               phone="06 70 49 85 82"
               email="contact@foncierechaligny.com"
               address="10 rue des champs Elysés"

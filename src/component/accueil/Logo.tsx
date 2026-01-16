@@ -4,7 +4,7 @@ export default function Logo() {
       data-section
       className="h-screen snap-start bg-lightgreen flex justify-center items-center"
     >
-      <div className="w-4/5 max-w-md sm:max-w-lg md:max-w-xl lg:max-w-2xl">
+      <div className="w-4/5 max-w-md sm:max-w-lg md:max-w-lg lg:max-w-xl">
         <svg
           viewBox="0 0 406 465"
           fill="none"

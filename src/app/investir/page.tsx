@@ -123,38 +123,38 @@ export default function Investir() {
           </span>
         </motion.div>
 
-        <motion.div
-          className="w-full flex justify-end font-[Montserrat] text-darkblue text-3xl px-50"
-          initial={{ opacity: 0, x: 50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 1 }}
-        >
-          <h1>Les atouts de notre modèle</h1>
-        </motion.div>
+        <div className="relative w-full py-20">
+          <div className="mx-auto w-[900px]">
+            <motion.div
+              className="font-[Montserrat] text-darkblue text-3xl mb-16"
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1 }}
+            >
+              <h1>Les atouts de notre modèle</h1>
+            </motion.div>
 
-        <div className="relative w-full py-10">
-          {/* Ligne horizontale */}
-          <div
-            className="absolute top-1/2 right-0 h-px bg-darkblue z-0"
-            style={{ width: "calc(50% + 200px)" }}
-          />
+            <div
+              className="absolute bottom-30  h-px bg-darkblue"
+              style={{ width: "100%" }}
+            />
 
-          {/* Étapes */}
-          <div className="relative flex justify-center gap-6 z-10">
-            {["Confiance", "Sécurité", "Perfomance"].map((step, i) => (
-              <motion.div
-                key={i}
-                className="w-60 h-20 text-2xl font-medium text-center leading-[5rem] bg-darkblue text-beige"
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: i * 0.3 }}
-                whileHover={{ scale: 1.05 }}
-              >
-                {step}
-              </motion.div>
-            ))}
+            <div className="relative flex gap-6 z-10">
+              {["Confiance", "Sécurité", "Performance"].map((step, i) => (
+                <motion.div
+                  key={i}
+                  className="w-60 h-20 text-2xl font-medium text-center leading-[5rem] bg-darkblue text-beige"
+                  initial={{ opacity: 0, y: 50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: i * 0.3 }}
+                  whileHover={{ scale: 1.05 }}
+                >
+                  {step}
+                </motion.div>
+              ))}
+            </div>
           </div>
         </div>
 

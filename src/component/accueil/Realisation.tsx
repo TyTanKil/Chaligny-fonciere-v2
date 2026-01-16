@@ -190,7 +190,7 @@ export default function Realisation() {
         className="hidden sm:flex justify-center mt-10"
       >
         <Link href="/realisation">
-          <button className="inline-block bg-beige text-4xl text-darkblue p-2 hover:bg-darkblue hover:text-beige transition">
+          <button className="inline-block font-normal bg-beige text-4xl text-darkblue p-2 hover:bg-darkblue hover:text-beige transition">
             Découvrir tous nos projets
           </button>
         </Link>

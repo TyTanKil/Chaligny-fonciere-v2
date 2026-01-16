@@ -23,14 +23,14 @@ export default function ContactSection({
 }: ContactSectionProps) {
   return (
     <section className="relative flex justify-center overflow-hidden px-4 sm:px-6 mt-5">
-      <div className="relative flex w-full max-w-7xl flex-col lg:flex-row gap-10">
+      <div className="relative flex w-full max-w-7xl flex-col lg:flex-row">
         {/* FORMULAIRE */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7, ease: "easeOut" }}
           viewport={{ once: true, amount: 0.3 }}
-          className="relative z-10 w-full lg:w-[55%] bg-white p-6 sm:p-10 lg:p-16 flex flex-col text-darkblue font-[Montserrat] rounded-lg shadow-md"
+          className="relative z-10 w-full lg:w-[55%] bg-white p-10 sm:p-10 lg:p-16 flex flex-col text-darkblue font-[Montserrat] shadow-md"
         >
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -154,13 +154,13 @@ export default function ContactSection({
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7, ease: "easeOut", delay: 0.1 }}
             viewport={{ once: true, amount: 0.3 }}
-            className="relative w-full lg:w-[45%] mt-6 lg:mt-0 flex justify-center"
+            className="relative mt-10 lg:mt-0 lg:absolute lg:right-0 lg:top-1/2 lg:-translate-y-1/2 w-full lg:w-[45%]"
           >
-            <div className="overflow-hidden rounded-lg lg:rounded-tr-[120px] lg:rounded-br-[120px] p-4 sm:p-6 lg:p-10">
+            <div className={`overflow-hidden rounded-tr-[120px] rounded-br-[120px] bg-darkblue p-8 lg:p-10`}>
               <img
                 src={srcImage}
                 alt={altImage}
-                className="w-full h-auto object-cover"
+                className="w-full object-cover"
               />
             </div>
           </motion.div>

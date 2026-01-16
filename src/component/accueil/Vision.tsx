@@ -166,7 +166,7 @@ export default function Vision() {
             className="flex items-center justify-center py-6"
           >
             <Link href="/vision">
-              <button className="inline-block bg-beige text-2xl text-darkblue underline p-2 hover:bg-darkblue hover:text-beige transition">
+              <button className="inline-block font-[Faustina] font-normal text-2xl bg-beige text-darkblue p-2 hover:bg-darkblue hover:text-beige transition">
                 Notre Vision
               </button>
             </Link>

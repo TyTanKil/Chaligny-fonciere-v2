@@ -83,7 +83,7 @@ export default function Investir() {
           className="flex justify-center sm:justify-end mt-6 sm:mt-0 font-[Faustina]"
         >
           <Link href="/investir">
-            <button className="bg-beige text-2xl text-darkblue underline p-2 hover:bg-darkblue hover:text-beige transition">
+            <button className="bg-beige text-2xl text-darkblue font-normal p-2 hover:bg-darkblue hover:text-beige transition">
               En Savoir plus
             </button>
           </Link>

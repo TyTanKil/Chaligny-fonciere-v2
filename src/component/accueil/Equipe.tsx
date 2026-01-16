@@ -22,8 +22,8 @@ export default function Equipe() {
             <TeamCarousel data={teamMembers} />
 
             <Link href="/vision">
-              <button className="mt-6 sm:mt-10 bg-beige text-3xl sm:text-4xl text-darkblue p-2 hover:bg-darkblue hover:text-beige transition">
-                <span className="underline">S</span>avoir faire
+              <button className="mt-6 sm:mt-10 bg-beige font-normal text-3xl sm:text-4xl text-darkblue p-2 hover:bg-darkblue hover:text-beige transition">
+                Savoir faire
               </button>
             </Link>
           </div>

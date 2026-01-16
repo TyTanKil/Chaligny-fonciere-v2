@@ -92,7 +92,7 @@ export default function ImmoBricks() {
               className="flex justify-center"
             >
               <Link href="/immoBricks">
-                <button className="inline-block bg-beige text-4xl text-darkblue font-[Faustina] p-2 hover:bg-darkblue hover:text-beige transition">
+                <button className="inline-block font-normal bg-beige text-4xl text-darkblue font-[Faustina] p-2 hover:bg-darkblue hover:text-beige transition">
                   Découvrir le concept
                 </button>
               </Link>
@@ -154,7 +154,7 @@ export default function ImmoBricks() {
               className="flex justify-center mt-2"
             >
               <Link href="/immoBricks">
-                <button className="inline-block bg-beige text-2xl sm:text-3xl text-darkblue font-[Faustina] p-2 hover:bg-darkblue hover:text-beige transition">
+                <button className="inline-block font-[Montserrat] font-semibold bg-beige text-2xl sm:text-3xl text-darkblue font-[Faustina] p-2 hover:bg-darkblue hover:text-beige transition">
                   Découvrir le concept
                 </button>
               </Link>

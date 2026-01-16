@@ -102,7 +102,7 @@ export default function Histoire() {
               className="flex justify-center md:justify-start"
             >
               <Link href="/histoire">
-                <button className="inline-block bg-beige text-darkblue underline p-2 hover:bg-darkblue hover:text-beige transition">
+                <button className="inline-block font-[Faustina] font-normal text-2xl bg-beige text-darkblue p-2 hover:bg-darkblue hover:text-beige transition">
                   Notre histoire
                 </button>
               </Link>
