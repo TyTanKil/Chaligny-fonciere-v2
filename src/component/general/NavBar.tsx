@@ -14,7 +14,7 @@ export default function Navbar() {
     { href: "/realisation", label: "Nos réalisations" },
     { href: "/immoBricks", label: "ImmoBricks" },
     { href: "/contact", label: "Contact" },
-    { href: "tel:+33670498582", label: "06 70 49 85 82" }
+    { href: "tel:+33670498582", label: "01 85 55 37 00" }
   ];
 
   /* 🔒 Lock scroll */

@@ -147,7 +147,7 @@ export default function Contact() {
       >
         <p>contact@foncièrechaligny.com</p>
         <span className="hidden sm:inline">|</span>
-        <p>06 70 49 85 82</p>
+        <p>01 85 55 37 00</p>
       </motion.div>
     </section>
   );
