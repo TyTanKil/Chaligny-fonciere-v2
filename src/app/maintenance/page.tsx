@@ -2,8 +2,8 @@ export default function MaintenancePage() {
   return (
     <main className="bg-black min-h-screen flex flex-col items-center justify-center text-white">
       <svg
-        width="679"
-        height="269"
+        width="270"
+        height="107"
         viewBox="0 0 679 269"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
