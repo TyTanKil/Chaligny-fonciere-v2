@@ -1,6 +1,6 @@
 export default function MaintenancePage() {
   return (
-    <main className="bg-black min-h-screen flex flex-col items-center justify-center text-white">
+    <main className="bg-darkblue min-h-screen flex flex-col items-center justify-center text-white">
       <svg
         width="270"
         height="107"

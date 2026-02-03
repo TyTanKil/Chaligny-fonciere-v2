@@ -8,7 +8,7 @@ import Navbar from "@/component/general/NavBar";
 export default function Realisation() {
   const projects = [
     {
-      imageSrc: "/10.png",
+      imageSrc: "/Accueil/PhotosNosRea.png",
       imageAlt: "Immeuble résidentiel à Paris",
       title: "RÉNOVATION D’UN IMMEUBLE RÉSIDENTIEL À PARIS 1ᵉ",
       description: [
@@ -20,24 +20,24 @@ export default function Realisation() {
       descriptionColor: "text-beige",
     },
     {
-      imageSrc: "/10.png",
+      imageSrc: "/Accueil/PhotosNosRea2.png",
       imageAlt: "Immeuble résidentiel à Paris",
-      title: "RÉNOVATION D’UN IMMEUBLE RÉSIDENTIEL À PARIS 1ᵉ",
+      title: "Division et revente d’un immeuble à Nanterre",
       description: [
-        "Transformation d’un immeuble ancien en appartements modernes et optimisés pour la location.",
-        "Valorisation du patrimoine et création de revenus locatifs stables pour les investisseurs.",
+        "Achat d’un immeuble sous‑exploité, division en lots résidentiels et vente à la découpe.",
+        "Création de plus-value et optimisation du rendement global du portefeuille.",
       ],
       backgroundColor: "bg-beige",
       titleColor: "text-lightgreen",
       descriptionColor: "text-darkblue",
     },
     {
-      imageSrc: "/10.png",
+      imageSrc: "/Accueil/PhotosNosRea3.png",
       imageAlt: "Immeuble résidentiel à Paris",
-      title: "RÉNOVATION D’UN IMMEUBLE RÉSIDENTIEL À PARIS 1ᵉ",
+      title: "Acquisition d’un local commercial dans le Grand Paris",
       description: [
-        "Transformation d’un immeuble ancien en appartements modernes et optimisés pour la location.",
-        "Valorisation du patrimoine et création de revenus locatifs stables pour les investisseurs.",
+        "Sélection d’un bien rare avant sa mise sur le marché, négociation directe avec le propriétaire.",
+        "Mise en location rapide et sécurisée, générant un revenu régulier dès la première année.",
       ],
       backgroundColor: "bg-darkblue",
       titleColor: "text-beige",

@@ -22,14 +22,14 @@ const pillars = [
     id: 3,
     title: "OPTIMISER ET TRANSFORMER",
     content:
-      "Amélioration de la performance des actifs par des actions ciblées : travaux, réhabilitation, modernisation et optimisation locative.",
+      "Amélioration de la performance des actifs par des actions ciblées : travaux, réhabilitation, modernisation et optimisation locative, dans une logique de création de valeur durable.",
     label: "OPTIMISER",
   },
   {
     id: 4,
     title: "VALORISER / GÉRER",
     content:
-      "Gestion complète et rigoureuse des actifs afin de sécuriser et pérenniser la valeur des investissements dans le temps.",
+      "Gestion complète et rigoureuse des actifs immobiliers, visant à sécuriser les revenus et à pérenniser la valeur des investissements sur le long terme.",
     label: "PÉRENNITÉ",
   },
 ];

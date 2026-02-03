@@ -52,34 +52,33 @@ export default function ImmoBricksDesktop() {
       <div className="relative w-full flex items-start justify-start gap-20 px-16 py-14">
         {/* Texte */}
         <motion.div
-          className="w-3/5 flex flex-col justify-between gap-6 z-10" 
+          className="w-3/5 flex flex-col justify-between gap-6 z-10"
           initial={{ opacity: 0, x: -30 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7 }}
           viewport={{ once: true }}
         >
           <h2 className="text-4xl text-lightgreen font-normal uppercase">
-            l'immobilier accessible autrement
+            Immo Bricks : investir dans l’immobilier grâce à la tokenisation
           </h2>
 
           <p className="text-2xl text-darkblue">
-            Immo Bricks est notre futur modèle d'investissement fractionné,
-            fondé sur la digitalisation d'actifs immobiliers.
+            Immo Bricks est le futur modèle d’investissement immobilier
+            fractionné de Foncière Chaligny, fondé sur la digitalisation
+            d’actifs immobiliers via la blockchain.
           </p>
 
           <p className="text-2xl text-darkblue">
-            <span className="font-bold">L'objectif :</span> investir simplement
-            dans l'immobilier sélectionné par Foncière Chaligny.
-          </p>
-
-          <p className="text-2xl text-lightgreen font-semibold">
-            À partir de 2 000 € sans les contraintes de gestion.
+            Il permet d’investir dans l’immobilier{" "}
+            <span className="font-bold">à partir de 2 000 €,</span> sans
+            contraintes de gestion, dans une logique de transparence et de
+            pédagogie.
           </p>
         </motion.div>
 
         {/* Image en absolute */}
         <motion.img
-          src="/13.png"
+          src="/Immobricks/14.png"
           alt="Illustration Immo Bricks"
           className="absolute top-12 right-0 w-[30%] lg:w-[35%] h-auto rounded-md object-cover"
           initial={{ opacity: 0, x: 40, scale: 0.95 }}
@@ -99,16 +98,18 @@ export default function ImmoBricksDesktop() {
       >
         <div className="w-full lg:w-5/6 bg-lightgreen p-6 lg:p-16 flex flex-col gap-6 font-[Montserrat]">
           <div className="w-full lg:w-2/3">
-            <p className="text-xl lg:text-3xl uppercase text-darkblue font-semibold text-center lg:text-left">
-              Comment ça marche
+            <p className="text-xl lg:text-2xl uppercase text-darkblue font-semibold text-center lg:text-left">
+              Comment fonctionne l’investissement immobilier fractionné avec
+              Immo Bricks ?
             </p>
             <p className="text-base sm:text-lg lg:text-xl text-darkblue text-center lg:text-left">
-              Nous transformons la valeur d'un bien immobilier en tokens, chacun
-              représentant une fraction du bien.
+              La valeur d’un bien immobilier est fractionnée en tokens, chacun
+              représentant une part de l’actif.
             </p>
             <p className="text-base sm:text-lg lg:text-xl text-darkblue text-center lg:text-left">
-              En investissant dans ces tokens, vous devenez détenteur d'une part
-              de l'actif et bénéficiez :
+              En investissant dans ces tokens, vous détenez une fraction du bien
+              et bénéficiez de la valorisation et des revenus, sans gestion
+              directe.
             </p>
           </div>
 

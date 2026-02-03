@@ -63,6 +63,23 @@ export default function Investir() {
           </motion.span>
         </motion.h1>
       </motion.div>
+      <motion.div
+        initial={{ opacity: 0, y: -50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true, amount: 0.3 }}
+        className="flex flex-col text-base sm:text-lg md:text-xl 2xl:text-2xl px-2 sm:px-10 font-[Montserrat]"
+      >
+        <motion.span
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.6 }}
+          viewport={{ once: true }}
+          className="text-darkblue"
+        >
+          Foncière Chaligny accompagne les investisseurs à chaque étape de l'investissement immobilier à Paris et en Île-de-France, grâce à une approche rigoureuse, indépendante et orientée long terme.
+        </motion.span>
+      </motion.div>
 
       {/* Section des piliers */}
       <motion.div
@@ -70,7 +87,7 @@ export default function Investir() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, delay: 0.3 }}
         viewport={{ once: true, amount: 0.2 }}
-        className="relative w-full overflow-x-auto sm:overflow-x-visible px-4 sm:px-0 py-6"
+        className="relative w-full overflow-x-auto sm:overflow-x-visible px-4 sm:px-0"
       >
         <PillarsSection />
 

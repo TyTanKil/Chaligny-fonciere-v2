@@ -71,7 +71,7 @@ export default function Vision() {
           transition={{ duration: 1 }}
         >
           <h1 className="text-center">
-            Expertise immobilière intégrée à Paris
+            Chiffres clés de notre expertise immobilière
           </h1>
         </motion.div>
 
@@ -214,7 +214,7 @@ export default function Vision() {
           transition={{ duration: 1 }}
         >
           <h1>
-            Notre stratégie : Investir intelligemment, valoriser durablement
+            Notre stratégie d'investissement : investir intelligemment, valoriser durablement
           </h1>
         </motion.div>
       </motion.div>

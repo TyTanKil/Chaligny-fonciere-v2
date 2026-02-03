@@ -123,8 +123,8 @@ export default function Contact() {
         className="w-full bg-darkblue text-white px-6 sm:px-14 py-8 flex flex-col sm:flex-row items-center sm:items-start justify-center sm:justify-between gap-6 sm:gap-12 shadow-xl rounded-lg"
       >
         <p className="text-lg sm:text-xl text-beige font-[Montserrat] font-bold max-w-full sm:max-w-md text-center sm:text-left">
-          Vous souhaitez investir dans l’immobilier à Paris ou en Île-de-France
-          ?
+          Vous souahaitez investir dans l'immobilier à Paris ou en Île-de-France ?<br/>
+          Nos équipes sont à votre écoute pour échanger sur votre et vous accompagner.
         </p>
         <Link href="/contact">
           <motion.button

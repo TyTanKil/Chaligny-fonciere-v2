@@ -17,36 +17,33 @@ type ProjectCardProps = {
 
 const projects: ProjectCardProps[] = [
   {
-    imageSrc: "/10.png",
+    imageSrc: "/Accueil/PhotosNosRea.png",
     imageAlt: "Immeuble résidentiel à Paris",
     title: "RÉNOVATION D'UN IMMEUBLE RÉSIDENTIEL À PARIS 1ᵉ",
     description: [
-      "Transformation d'un immeuble ancien en appartements modernes et optimisés pour la location.",
-      "Valorisation du patrimoine et création de revenus locatifs stables pour les investisseurs.",
+      
     ],
     backgroundColor: "bg-lightgreen",
     titleColor: "text-darkblue",
     descriptionColor: "text-beige",
   },
   {
-    imageSrc: "/11.png",
+    imageSrc: "/Accueil/PhotosNosRea2.png",
     imageAlt: "Immeuble résidentiel à Paris",
-    title: "RÉNOVATION D'UN IMMEUBLE RÉSIDENTIEL À PARIS 1ᵉ",
+    title: "DIVISION ET REVENTE D'UN IMMEUBLE À NANTERRE",
     description: [
-      "Transformation d'un immeuble ancien en appartements modernes et optimisés pour la location.",
-      "Valorisation du patrimoine et création de revenus locatifs stables pour les investisseurs.",
+      
     ],
     backgroundColor: "bg-beige",
     titleColor: "text-lightgreen",
     descriptionColor: "text-darkblue",
   },
   {
-    imageSrc: "/12.png",
+    imageSrc: "/Accueil/PhotosNosRea3.png",
     imageAlt: "Immeuble résidentiel à Paris",
-    title: "RÉNOVATION D'UN IMMEUBLE RÉSIDENTIEL À PARIS 1ᵉ",
+    title: "ACQUISITION D'UN LOCAL COMMERCIAL DANS LE GRAND PARIS",
     description: [
-      "Transformation d'un immeuble ancien en appartements modernes et optimisés pour la location.",
-      "Valorisation du patrimoine et création de revenus locatifs stables pour les investisseurs.",
+      
     ],
     backgroundColor: "bg-darkblue",
     titleColor: "text-beige",

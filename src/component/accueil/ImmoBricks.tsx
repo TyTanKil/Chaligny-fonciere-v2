@@ -51,6 +51,16 @@ export default function ImmoBricks() {
           className="2xl:text-7xl xl:text-5xl lg:text-3xl text-beige italic"
         >
           Immo <span className="text-darkblue not-italic">Bricks</span>
+          <br />
+            <motion.span
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              viewport={{ once: true }}
+              className="2xl:text-2xl xl:text-xl text-beige font-bold font-[Montserrat] not-italic"
+            >
+              Immo Bricks : investir dans l'immobilier grâce à la tokenisation
+            </motion.span>
         </motion.h1>
       </motion.div>
 
@@ -72,17 +82,16 @@ export default function ImmoBricks() {
               viewport={{ once: true }}
               className="text-2xl"
             >
-              Découvrez notre modèle d'investissement fractionné, fondé sur la
-              blockchain.
+              Immo Bricks est le futur modèle d'investissement immobilier fractionné de Foncière Chaligny, fondé sur la digitalisation d'actifs immobiliers via la blockchain.
             </motion.span>
             <motion.span
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.6 }}
               viewport={{ once: true }}
-              className="text-2xl font-bold"
+              className="text-2xl"
             >
-              Un accès simplifié à l'immobilier dès 2 000 €.
+             Il permet d'investir dans l'immobilier <span className="font-bold">à partir de 2000 €,</span> sans contraintes de gestion, avec transparence et traçabilité.
             </motion.span>
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}

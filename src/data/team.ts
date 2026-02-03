@@ -3,25 +3,23 @@ export const teamMembers = [
     id: 1,
     name: "Laurent Dacosta",
     role: "Directeur de la Stratégie Immobilière",
-    description: `Laurent définit la stratégie d’acquisition et les orientations immobilières de la foncière. Il coordonne les expertises internes et veille à la cohérence des opérations, de la prospection des opportunités jusqu’à leur intégration dans le portefeuille. Il contribue au développement global et à la vision stratégique de la société.`,
-    image: "/team/2.png",
+    description: `Laurent Dacosta définit la stratégie d’acquisition et les orientations immobilières de la foncière. Il coordonne les expertises internes et veille à la cohérence des opérations, de la prospection à l'intégration des actifs au portefeuille.`,
+    image: "/Accueil/Photo accueil Laurent Dacosta.png",
   },
   {
     id: 2,
     name: "Eleonore Crevon",
     role: "Directrice des Opérations Immobilières",
-    description: `Éléonore supervise l’ensemble des opérations immobilières, 
-du sourcing des actifs à leur gestion opérationnelle. 
-Elle pilote la sélection des biens, leur analyse, 
-la stratégie de valorisation et la coordination des projets terrain. 
-Elle garantit la performance et la cohérence du portefeuille immobilier.`,
-    image: "/team/3.png",
+    description: `Éléonore Crevon supervise l’ensemble des opérations immobilières, 
+du sourcing des actifs à leur gestion. 
+Elle pilote la sélection des biens et les stratégies de valorisation sur le terrain.`,
+    image: "/Accueil/Photo accueil Eléonore Crevon.png",
   },
   {
     id: 3,
     name: "Ivan Varady",
     role: "Directeur Financier et Structuration",
-    description: `Ivan est en charge de la structuration financière et de la gestion courante de la foncière. Il pilote les levées de fonds, les relations bancaires et l’architecture financière des opérations. Il supervise le suivi administratif, financier et réglementaire afin de garantir une gestion solide et durable.`,
-    image: "/team/4.png",
+    description: `Ivan Varady est en charge de la structuration financière des opérations et de la gestion financière de la foncière. Il pilote les levées de fonds et sécurise l'architecture financière des investissements.`,
+    image: "/Accueil/Photo accueil Ivan Varady.png",
   },
 ];

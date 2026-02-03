@@ -44,8 +44,7 @@ export default function Vision() {
           <h1 className="2xl:text-7xl xl:text-5xl lg:text-3xl text-darkblue">
             Notre <span className="text-beige italic">Vision</span>
             <span className="block 2xl:text-3xl xl:text-2xl lg:text-lg text-beige font-bold font-[Montserrat] mt-2">
-              Une expertise immobilière intégrée au service de la performance
-              durable
+              Trois fondateurs experts de l'investissement immobilier à Paris
             </span>
           </h1>
         </motion.div>
@@ -60,8 +59,9 @@ export default function Vision() {
         >
           <p className="font-[Montserrat] text-center text-darkblue 2xl:text-3xl xl:text-xl lg:text-lg">
             Foncière Chaligny s’appuie sur une expertise immobilière intégrée
-            couvrant l’ensemble du cycle d’investissement : acquisition,
-            gestion, structuration financière et valorisation.
+            couvrant l’ensemble du cycle d’investissement immobilier à Paris et 
+            en Île-de-France.<br />De l'acquisition à la valorisation, chaque décision
+            est guidée par une vision long terme, rigoureuse et maîtrisée.
           </p>
         </motion.div>
 
@@ -132,15 +132,15 @@ export default function Vision() {
           {[
             {
               title: "TRANSACTION",
-              text: "Identification et acquisition d’actifs immobiliers à fort potentiel sur le marché parisien et francilien.",
+              text: "Identification et acquisition d'actifs immobiliers à fort potentiel sur le marché parisien et francilien, grâce à une connaissance fine du terrain et des opportunités off-market.",
             },
             {
               title: "GESTION",
-              text: "Pilotage locatif, suivi opérationnel et valorisation des actifs dans la durée.",
+              text: "Pilotage locatif, suivi opérationnel et valorisation des actifs immobiliers dans la durée, avec une gestion rigoureuse et transparente au service de la performance.",
             },
             {
               title: "STRUCTURATION FINANCIÈRE",
-              text: "Montage des opérations, levées de fonds et optimisation des rendements pour les investisseurs.",
+              text: "Montage des opérations immobilières, levées de fonds et optimisation des rendements, assurant la solidité financière et la cohérence des investissements pour les investisseurs.",
             },
           ].map((item, i) => (
             <motion.div

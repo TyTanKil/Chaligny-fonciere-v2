@@ -57,13 +57,14 @@ export default function Investir() {
           </motion.div>
 
           <motion.div
-            className="w-full flex justify-start font-[Montserrat] text-darkblue text-3xl p-10"
+            className="w-full flex flex-col justify-start font-[Montserrat] text-darkblue text-3xl p-10"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 1 }}
           >
-            <h1>Investir l’esprit libre, en toute confiance</h1>
+            <h1>Investir avec une foncière immobilière</h1>
+            <h1>indépendante à Paris</h1>
           </motion.div>
         </div>
 
@@ -89,7 +90,7 @@ export default function Investir() {
                 >
                   {step}
                 </motion.div>
-              )
+              ),
             )}
           </div>
 
@@ -113,13 +114,14 @@ export default function Investir() {
         >
           <span className="w-1/3 p-5 bg-white font-[Montserrat] text-center text-darkblue z-40">
             Notre ambition est d’offrir à nos investisseurs un cadre
-            d’investissement clair, structuré et sécurisé pour développer leur
-            patrimoine immobilier. <br />
+            d’investissement immobilier clair, structuré et sécurisé, leur
+            permettant de développer et valoriser durablement leur patrimoine
+            immobilier. <br />
             <br />
-            Nous sélectionnons des actifs immobiliers rigoureusement analysés,
-            les gérons avec exigence et mettons en œuvre des stratégies visant à
-            créer de la valeur durable, dans une logique de transparence et de
-            performance.
+            Foncière Chaligny sélectionne des actifs immobiliers rigoureusement
+            analysés, les gère avec exigence et met en œuvre des stratégies de
+            création de valeur durable, dans une logique de transparence, de
+            performance et de vision long terme.
           </span>
         </motion.div>
 
@@ -166,8 +168,7 @@ export default function Investir() {
           transition={{ duration: 1 }}
         >
           <p className="text-xl text-beige font-[Montserrat] font-bold max-w-md">
-            Notre mission : vous permettre d’investir sereinement dans des
-            actifs solides, maîtrisés et créateurs de valeur.
+            Un accompagnement dédié aux investisseurs immobiliers
           </p>
 
           <Link href="/contact">
@@ -279,7 +280,7 @@ export default function Investir() {
               >
                 {step}
               </motion.div>
-            )
+            ),
           )}
         </div>
 

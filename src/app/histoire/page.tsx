@@ -38,7 +38,8 @@ const Logo = ({ color }: { color: string }) => (
 const CTABlock = () => (
   <div className="bg-darkblue px-6 py-8 lg:px-14 lg:py-10 text-center lg:text-left space-y-4 lg:space-y-0 lg:flex lg:justify-between lg:items-center font-[Montserrat]">
     <p className="text-beige font-bold font-[Montserrat] text-base lg:text-lg xl:text-xl max-w-md">
-      Nos experts sont à votre écoute pour vous accompagner.
+      Nos experts sont à votre écoute pour vous accompagner dans votre projet
+      d'investissement immobilier, avec proximité et rigueur.
     </p>
     <Link href="/contact">
       <button className="border-2 border-beige px-6 py-3 lg:px-8 uppercase text-sm lg:text-base text-beige tracking-widest font-semibold hover:bg-beige hover:text-darkblue transition-all duration-300 whitespace-nowrap">
@@ -62,30 +63,28 @@ const HistoireMobile = () => (
 
     <div className="bg-white px-6 py-8 space-y-6 text-darkblue font-[Montserrat]">
       <h2 className="text-3xl font-[Faustina] text-lightgreen">
-        Notre histoire{" "}
-        <span className="text-darkblue">commence sur le terrain</span>
+        Une foncière immobilière indépendante née du terrain parisien.
       </h2>
 
       <div className="space-y-4">
         <p>
           Foncière Chaligny est une foncière immobilière indépendante, fondée
-          sur une conviction simple :
+          sur une conviction simple : la performance durable repose sur la
+          complémentarité des expertises, la confiance et une vision long terme
+          de l'investissement immobilier.
         </p>
 
         <p>
-          La performance durable repose sur la complémentarité des expertises,
-          la confiance et une vision long terme de l'investissement immobilier.
-        </p>
-
-        <p>
-          Portée par trois fondateurs aux profils différents mais parfaitement
-          alignés, Foncière Chaligny acquiert, développe et gère des actifs
-          immobiliers avec une approche responsable.
+          Portée par trois fondateurs aux profils complémentaires et
+          parfaitement alignés, la foncière acquiert, développe et gère des
+          actifs immobiliers avec une approche responsable, agile et ancrée dans
+          la réalité du terrain, notamment sur le marché parisien et francilien.
         </p>
 
         <p>
           <span className="text-lightgreen font-bold">Notre promesse :</span>{" "}
-          offrir une gestion transparente et exigeante.
+          Offrir à nos investisseurs une gestion transparente et exigeante,
+          tournée vers la création de valeur durable dans le temps.
         </p>
       </div>
     </div>
@@ -118,24 +117,27 @@ const EquipeMobile = () => (
         <p>
           <span className="font-bold">Éléonore Crevon</span>
           <br />
-          Co-fondatrice — relation humaine et confiance au cœur de chaque
-          projet.
+          Co-fondatrice — Elle porte l'approche humaine et la relation de
+          confiance qui guident chaque projet immobilier.
         </p>
 
         <p>
           <span className="font-bold">Laurent Da Costa</span>
           <br />
-          Co-fondateur — exigence opérationnelle et fiabilité des opérations.
+          Co-fondateur — Il garantit l'exigence opérationnelle et la fiabilité
+          des opérations au coeur de la foncière.
         </p>
 
         <p>
           <span className="font-bold">Ivan Varady</span>
           <br />
-          Co-fondateur — vision stratégique et financière long terme.
+          Co-fondateur — Il apporte la vision stratégique et financière,
+          assurant la cohérence des investissements dans le long terme.
         </p>
 
         <p className="text-lightgreen font-bold italic">
-          Complémentarité, confiance et vision durable.
+          Ensemble, ils incarnent les valeurs de Foncière Chaligny :
+          complémentarité, confiance et vision durable de l'investissement.
         </p>
       </div>
     </div>
@@ -166,32 +168,28 @@ const HistoireDesktop = () => (
       className="relative z-10 ml-32 mt-16 w-[60%] min-h-[600px] bg-white px-10 py-16 shadow-lg"
     >
       <h2 className="text-4xl 2xl:text-5xl font-[Faustina] text-lightgreen mb-6 leading-tight">
-        Notre histoire
-        <span className="block mt-2 text-darkblue">
-          commence sur le terrain
-        </span>
+        Une foncière immobilière indépendante née du terrain parisien.
       </h2>
 
       <div className="space-y-5 font-[Montserrat] w-3/4 text-darkblue text-lg leading-relaxed">
         <p>
           Foncière Chaligny est une foncière immobilière indépendante, fondée
-          sur une conviction simple :
+          sur une conviction simple : la performance durable repose sur la
+          complémentarité des expertises, la confiance et une vision long terme
+          de l'investissement immobilier.
         </p>
 
         <p>
-          La performance durable repose sur la complémentarité des expertises,
-          la confiance et une vision long terme de l'investissement immobilier.
-        </p>
-
-        <p>
-          Portée par trois fondateurs aux profils différents mais parfaitement
-          alignés, Foncière Chaligny développe des actifs responsables et
-          durables.
+          Portée par trois fondateurs aux profils complémentaires et
+          parfaitement alignés, la foncière acquiert, développe et gère des
+          actifs immobiliers avec une approche responsable, agile et ancrée dans
+          la réalité du terrain, notamment sur le marché parisien et francilien.
         </p>
 
         <p>
           <span className="text-lightgreen font-bold">Notre promesse :</span>{" "}
-          une création de valeur transparente et durable.
+          Offrir à nos investisseurs une gestion transparente et exigeante,
+          tournée vers la création de valeur durable dans le temps.
         </p>
       </div>
     </motion.div>
@@ -203,7 +201,8 @@ const HistoireDesktop = () => (
       className="absolute -bottom-24 w-[60vw] bg-darkblue px-14 py-10 flex justify-between items-center shadow-xl z-30"
     >
       <p className="text-beige font-[Montserrat] font-bold text-xl max-w-md">
-        Nos experts sont à votre écoute pour vous accompagner.
+        Nos experts sont à votre écoute pour vous accompagner dans votre projet
+        d'investissement immobilier, avec proximité et rigueur.
       </p>
 
       <Link href="/contact">
@@ -246,19 +245,29 @@ const EquipeDesktop = () => (
         </p>
 
         <p>
-          <strong>Éléonore Crevon</strong> — relation humaine et confiance.
+          <span className="font-bold">Éléonore Crevon</span>
+          <br />
+          Co-fondatrice — Elle porte l'approche humaine et la relation de
+          confiance qui guident chaque projet immobilier.
         </p>
 
         <p>
-          <strong>Laurent Da Costa</strong> — exigence opérationnelle.
+          <span className="font-bold">Laurent Da Costa</span>
+          <br />
+          Co-fondateur — Il garantit l'exigence opérationnelle et la fiabilité
+          des opérations au coeur de la foncière.
         </p>
 
         <p>
-          <strong>Ivan Varady</strong> — vision stratégique et financière.
+          <span className="font-bold">Ivan Varady</span>
+          <br />
+          Co-fondateur — Il apporte la vision stratégique et financière,
+          assurant la cohérence des investissements dans le long terme.
         </p>
 
         <p className="text-lightgreen font-bold italic">
-          Complémentarité, confiance et vision durable.
+          Ensemble, ils incarnent les valeurs de Foncière Chaligny :
+          complémentarité, confiance et vision durable de l'investissement.
         </p>
       </div>
     </motion.div>
@@ -270,7 +279,8 @@ const EquipeDesktop = () => (
       className="absolute -bottom-24 w-[60vw] bg-darkblue px-14 py-10 flex justify-between items-center shadow-xl z-30"
     >
       <p className="text-beige font-[Montserrat] font-bold text-xl max-w-md">
-        Nos experts sont à votre écoute pour vous accompagner.
+        Nos experts sont à votre écoute pour vous accompagner dans votre projet
+        d'investissement immobilier, avec proximité et rigueur.
       </p>
 
       <Link href="/contact">

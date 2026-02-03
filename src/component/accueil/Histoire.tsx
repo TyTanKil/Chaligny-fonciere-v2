@@ -62,8 +62,7 @@ export default function Histoire() {
               viewport={{ once: true }}
               className="text-lightgreen font-bold"
             >
-              Une foncière immobilière née du terrain et de l’expertise
-              financière
+              Une foncière immobilière indépendante, ancrée sur le terrain parisien
             </motion.span>
 
             <motion.span
@@ -73,12 +72,9 @@ export default function Histoire() {
               viewport={{ once: true }}
               className="text-darkblue"
             >
-              De la transaction immobilière à la structuration financière,
-              Foncière Chaligny est née de la rencontre entre des expertises
-              complémentaires, réunies autour d’une même ambition :<br />
-              <span className="text-lightgreen font-bold">
-                créer un acteur immobilier indépendant, agile et transparent.
-              </span>
+              Foncière Chaligny est une foncière immobilière indépendante,
+              spécialisée dans l'investissement et la gestion d'actifs immobiliers à
+              Paris et en Île-de-France.
             </motion.span>
 
             <motion.span
@@ -88,10 +84,13 @@ export default function Histoire() {
               viewport={{ once: true }}
               className="text-darkblue"
             >
-              Portée par trois fondateurs aux profils parfaitement alignés, la
-              foncière développe et gère des actifs immobiliers à Paris et en
-              Île-de-France avec une approche responsable, rigoureuse et ancrée
-              dans la réalité du marché.
+              Née de la rencontre entre des expertises complémentaires de la transaction
+              , de la gestion et de la structuration financière, la foncière s'est construite
+              autour d'une ambition commune :<br />
+              <span className="text-lightgreen font-bold">
+                créer un acteur immobilier indépendant, agile et transparent, au service
+                d'une création de valeur durable pour les investisseurs.
+              </span>
             </motion.span>
 
             <motion.div
@@ -119,7 +118,7 @@ export default function Histoire() {
           className="relative mx-auto order-2 aspect-square w-[250px] sm:w-[350px] md:w-[400px] lg:w-[450px] xl:w-[500px]"
         >
           <Image
-            src="/Bordeaux.png"
+            src="/Accueil/Photo accueil Notre Histoire.png"
             alt="Page d'accueil"
             fill
             style={{ objectFit: "cover", objectPosition: "center" }}
